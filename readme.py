@@ -36,26 +36,99 @@
 # =====================================================================
 # SPRINT NO.    TASKS               
 # 1             UI Creation
-#               1.  Features
-#               2.  Sub features
-#               3.  World Map
+#               1.  Create UI for world map
+#               2.  Create main menu containing various choice numbers
+#                   -New game
+#                   -Resume game
+#                   -Exit game
+#               3.  Create various game menus with the respective choices
+#                   -Town/Outdoor menu
+#                   -Combat menu
+#               Test to see if player input is displayed correctly
+#               1.  Player choice is displayed correctly for various game menus
 
-# 2             Connecting UI
-#               1.  Linking sub features with other features 
-#               2.  Linking sub features with other sub features
+# 2             Create functions for town menu
+#               1.  View character: 
+#                   -Shows the player’s damage, defense, health
+#               2.  View map: 
+#                   -Shows world map
+#               2.  Move: 
+#                   -Shows the world map with instructions indicating which key moves the player in which direction. 
+#                   -Displays the player’s chosen key.
+#                   -Add 1 day to the time
+#               2.  Rest: 
+#                   -Shows the text “You are fully healed.”
+#                   -Add 1 day to the time
+#               Test if appropriate UI shows up and functions are working as intended
+#               1.  View character: 
+#                   -Shows the player’s stats properly. (eg. if player has 10hp it should be reflected there)
+#               2.  View map: 
+#                   -Shows the map with H being where the player currently is.
+#               2.  Move: 
+#                   -Shows the map and its instructions. The player’s chosen key is displayed properly. 
+#                   -The position of H moves in the correct direction.
+#                   -Ensure that 1 day is added to the time
+#               2.  Rest: 
+#                   -Rest text is shown
+#                   --Player’s health is reset back to 20 
+#                   -Ensure that 1 day is added to the time
 
-# 3             Functions pt.1
-#               1.  Character Movement
-#               2.  Rest
-#               3.  Display Stats
-#               4.  View Map
+# 3             Create functions for combat menu
+#               1.  Attack:
+#                   -Deal 2-4 damage to enemy
+#                   -Display damage dealt to enemy
+#                   -Damage dealt is calculated after deducting enemy defense from player’s attack
+#                   -Display damage taken from enemy
+#                   -Damage taken follows same calculation as damage dealt
+#                   -Display remaining health
+#                   -Display outdoor menu if enemy is defeated
+#               2.  Run:
+#                   -Displays outdoor menu
+#               Update town menu into outdoor menu
+#               1.  Display the following choices:
+#                   -View character
+#                   -View map
+#                   -Move
+#                   -Exit game
+#               2.  If player ran, view character and view map brings player back into combat
+#               3.  If brought into combat, enemy will recover all its health
+#               Test combat menu
+#               1.  Attack:
+#                   -Damage is between 2-4
+#                   -Damage dealt is displayed correctly
+#                   -Player remaining health is displayed correctly
+#                   -Enemy remaining health is displayed correctly
+#                   -Outdoor menu is displayed after enemy is defeated
+#               2.  Run:
+#                   -Outdoor menu is displayed
+#               Test outdoor menu
+#               1.  The correct choices are shown
+#               2.  If player ran, player is brought back into combat menu if view character or view map is chosen
+#               3.  If brought back into combat, enemy has recovered all its health
 
-# 4            Functions pt.2
-#               1.  Attack
-#               2.  Run
-#               3.  Save
-#               4.  Resume
-#               5.  Quit
+# 4            Saving player progress
+#               1.  New game:
+#                   -New game is created with the player starting at the original position with full health.
+#               2.  Save game:
+#                   -Player progression is saved into .csv file
+#                   -Overrides previous save file
+#               3.  Resume game:
+#                   -Game reads progress from existing .csv file
+#               4.  Exit game:
+#                   -Program stops running
+#               Testing player saves
+#               1.  New game:
+#                   -Player should be at full health
+#                   -Player should have no progress
+#               2.  Save game: 
+#                   -Player progress is written into a .csv file
+#                   -.csv file is created if there is no existing one
+#                   -Existing .csv file is overwritten
+#               3.  Resume game:
+#                   -Program successfully reads save file
+#                   -Displays error message if unable to do so
+#               4.  Exit game:
+#                   -Program stops running successfully
 # =====================================================================
 #
 #
