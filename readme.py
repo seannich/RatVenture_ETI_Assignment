@@ -1,26 +1,39 @@
 # created repo
 
-# USER STORIES
-#=========================================================================================================================================================================================
-# NO.           FEATURE                 SUB FEATURE           USER STORY
-# 1             Display Main Menu       New Game              As a player I want to be able to start a new game so that I can play the game.
-#                                       Resume Game           As a player I want to be able to resume from where I left off in the game so that I do not lose progress.
-#                                       Exit Game             As a player I want to be able to have the option to quit so that I can exit the game.
+"""
+USER STORIES
+=========================================================================================================================================================================================
+NO.     FEATURE                         SUB FEATURE             USER STORY
+1       UI Creation                     Main Menu               As a player I want to be able to select an option so that I can start the game.
+                                                                As a player I want to be able to select an option so that I can resume a saved game.
+                                                                As a player I want to be able to select an option so that I can exit the game.
 
-# 2             Display Town Menu       View Character        As a player I want to be able to view my character’s statistics so that I can decide whether to rest or move.
-#                                       View Map              As a player I want to be able to view my character on the map so that I can plan out my next move..
-#                                       Move                  As a player I want to be able to leave the town so that I can progress to the end.
-#                                       Rest                  As a player I want to be able to rest so that I can restore my health.
-#                                       Save Game             As a player I want to be able to save the game so that I can pause and come back to the game another time.
-#                                       Exit Game             As a player I want to be able to exit the game so that I can stop playing and come back another time.
+                                        Various Game Menus      As a player I want to have different game menus so that I can do different activities.
+                                                                As a player I want to be able to have combat options so that I can fight my enemies.
 
-# 3             Combat Menu             Attack                As a player I want to be able to attack during a fight so that I can defeat the opponent.
-#                                       Run                   As a player I want to be able to run away from a fight so that I can prevent myself from dying if I am low on health.
+                                        World Map               As a player I want to be able to see a world map so that I know where my character is.
 
-# 4             Display Outdoor Menu    View Character        As a player I want to be able to look at my character’s health so that I can decide to progress or head to a town to rest.
-#                                       View Map              As a player I want to be able to view my character on the map so that I can plan out my next move.
-#                                       Move                  As a player I want to be able to move in the game so that I can advance to the end.
-#                                       Exit Game             As a player I want to be able to exit the game so that I can stop playing and come back another time.          
+2       Functions Creation in Town      View Character          As a player I want to be able to view my character’s damage so that I know how much damage I deal to enemies.
+                                                                As a player I want to be able to view my character’s defence so that I know how well I defend against enemies.
+                                                                As a player I want to be able to view my character’s health so that I know when I’m supposed to heal myself.
+
+                                        View Map                As a player I want to be able to view my character on the map so that I can plan out my next move.
+
+                                        Move                    As a player I want to be able to leave the town so that I can progress to the end.
+
+                                        Rest                    As a player I want to be able to rest so that I can restore my health.
+
+3       Functions Creation for Combat   Attack                  As a player I want to be able to attack during a fight so that I can defeat the opponent.
+
+                                        Run                     As a player I want to be able to run away from a fight so that I can prevent myself from dying if I am low on health.
+
+4       Saving Player Progress          New Game                As a player I want to be able to start a new game so that I can play the game.
+
+                                        Save Game               As a player I want to be able to save the game so that I can pause and come back to the game another time.
+
+                                        Resume Game             As a player I want to load up a save of my previous game so that I can continue from where I stopped previously.
+
+                                        Exit Game               As a player I want to be able to exit the game so that I can stop playing and come back another time.
 #=========================================================================================================================================================================================
 
 # METHODLOGOIES ADOPTED
@@ -132,4 +145,4 @@
 # =====================================================================
 #
 #
-#
+"""
