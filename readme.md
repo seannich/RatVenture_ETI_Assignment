@@ -27,23 +27,20 @@
 ## METHODLOGOIES CONSIDERED
 
 1. Iterative 
+
+[Picture to be inserted]
+
   - Considerations:
     - When the requirements of the complete system are clearly defined and understood.
     - The major requirements are defined, while some functionalities and requested enhancements evolve with the process of the development process.
     - A new technology is being used and is being learnt by the development team, while they are working on the project.
   
 In this assignment, all the requirements of the final product are clearly defined and understood. The timeline of the different development stages have been planned out in the Sprint Log. Each sprint we release a specific set of usable features, which are enhanced in the next sprint by other features. The features will be more advanced as each sprint passes, for example the first sprint will be simply creating the UI of the various game menus. The following sprints will be the actual development of the game functions such as Move, Rest and so on. As the Iterative Model allows accessing previous phases, we will be able to access the code from the previous sprints if any changes have to be made to the existing features. We will also be using a new technology, PyTest, to run the automated tests.
-
-2. Agile 
-  - Considerations:
-    - Agile model used in the following scenarios:
-    - Few lenient processes in place and few initial product & regulatory requirements 
-    - Having a flexible approach towards software development. Priorities and requirements can be easily adjusted during the project to meet the requirements of the stakeholders.
- 
-Agile model allows the development to be incremental and iterative, having time in sprint to take place each 1 to 3 weeks each sprint being set in github as milestones. This model promotes a disciplined project management process that encourages inspections and adaptations frequently, the systematic process of Planning, implementing, building and testing. Additionally this model provides more value to the work of the development team, providing them more time to develop the application by reducing those non-productive issues. The QA will be able to track the project status with greater awareness, being able to catch and address the issues or bugs quickly by creating it on the github kaman board which will notify the developers on the issues and resolve it as soon as possible. 
           
-3. Waterfall
+2. Waterfall
 A linear project management approach, where stakeholders and requirements are gathered at the beginning of the project. A sequential approach is planned out to accommodate the requirements. This method is named so that each phrase of the project cascades into the next.
+
+[Picture to be inserted]
 
   - Advantages: 
     - It is a thorough, structured methodology suitable for smaller projects with deliverables that are easy to define. Going through these steps (Shown in figure above) 
@@ -52,7 +49,7 @@ A linear project management approach, where stakeholders and requirements are ga
     - Unlike scrum (Dividing projects into sprints), this method set the end goal as their main focus and has a concrete scheduling of the end date, this eliminates the risk of slowing down or pausing during the process. 
     - Transfer information well
     - Waterfall approach is highly methodical, it provides a clean transfer of information for each step. This methodology prioritizes accessible information so new additions to the team can get up to speed quickly if required. 
-
+    
   - Disadvantages:
     - Changes towards the projects are challenging 
     - Waterfall follows a strict set of steps, in the traditional waterfall there is no room for unexpected changes or revisions. To be able to change the parameters of the project, it could render much of the work that will throw of the entire timeline
@@ -63,7 +60,44 @@ A linear project management approach, where stakeholders and requirements are ga
     
 For this assignment, all our requirements are well defined and will not change. We started off the assignment by carrying out requirement gathering and documentation. We have also planned out the development schedule with specific end goals in mind, hence reducing time wastage. We will also implement automated testing only after our features have been completed.
       
-4. TBA
+3. Scrum Model (***Chosen***)
+
+Scrum is an agile project management methodology used primarily for software development projects. It is based on a set of very defined practices and roles that must be involved during the software development process. It is a flexible methodology that rewards the application of the 12 agile principles in a context agreed by all the team members of the product. 
+
+[Picture to be inserted]
+
+The scrum methodology follows the values and the principles of agile, includes further definitions and specifications, especially regarding certain software development practices. 
+
+[Picture to be inserted]
+
+The scrum model suggests that the project progresses via a series of sprints. In keeping with an agile methodology, sprints are timeboxed to no more than a month long, most commonly two weeks. One reason why it became our consideration, is due to the fact that this method can be applied on the github web application by setting the milestones as sprints. Additionally, allows the team to keep track of processes via creation of tasks on github and assigning them to the team members of the projects. 
+
+
+4. Big Bang Model
+
+[Picture to be inserted]
+
+The Big Bang model is unique in that it requires virtually no planning, organization, best practices, or typical procedures. Instead, the Big Bang model is fundamentally about simply starting the project right now, at this instant, with no formal development structure or organization.
+
+The design of Big bang model as follows:
+- In this approach, modules are integrated only when all or at least a portion of each module is ready, and not individually.
+- Modules are individually run to see if failure occurs at individual level.
+- If a bug is caught at integration level then that module is detached to find the root cause of the problem.
+
+**Advantages:**
+- Least planning required
+- Very limited resources are required
+- Developers have full flexibility in applying their ideas or opinions.
+- Managing modules isn’t much trouble.
+
+**Disadvantages:**
+- This model is not suitable for object oriented objects that are generally complex in nature.
+- If requirements are not understood well, then it may prove to be quite expensive.
+- Not at all suitable for projects that are lengthy in nature.
+- Higher level of risk and complexity is involved in this model as no formal method is followed.
+
+Since our assignment isn’t considered as a big project, the big bang model can be used as a last resort if all our previous methodologies have failed. Given the huge risk that this model has, it should only be considered if the team is running out of time to complete the assignment. The simple nature of this model means that the team doesn’t have to waste too much time planning or documenting and can just jump straight into the coding and testing aspect. This would be helpful if the deadline is nearing and there is still a lot to complete as each team member could focus on a feature to try and complete it.
+
 
 ## PRODUCT BACKLOG
 
