@@ -36,13 +36,68 @@ NO.     FEATURE                         SUB FEATURE             USER STORY
                                         Exit Game               As a player I want to be able to exit the game so that I can stop playing and come back another time.
 #=========================================================================================================================================================================================
 
-# METHODLOGOIES ADOPTED
+# METHODLOGOIES CONSIDERED
 # ==========================================
 # NO.           MODEL
-# 1             Iterative Model
-# 2             Continuous Integration
-# 3             DevOps
-# 4             Agile
+# 1             Iterative 
+#               Considerations:
+#               Iterative model is used in following scenarios:
+#               - When the requirements of the complete system are clearly defined and understood.
+#               - The major requirements are defined, while some functionalities and requested enhancements evolve with the process of the development process.
+#               - A new technology is being used and is being learnt by the development team, while they are working on the project.
+#               
+#               In this assignment, all the requirements of the final product are clearly defined and understood. The timeline of the different development stages have 
+#               been planned out in the Sprint Log. Each sprint we release a specific set of usable features, which are enhanced in the next sprint by other features. 
+#               The features will be more advanced as each sprint passes, for example the first sprint will be simply creating the UI of the various game menus. 
+#               The following sprints will be the actual development of the game functions such as Move, Rest and so on. As the Iterative Model allows accessing 
+#               previous phases, we will be able to access the code from the previous sprints if any changes have to be made to the existing features. We will also 
+#               be using a new technology, PyTest, to run the automated tests.
+#               
+# 2             Agile 
+#               Considerations:
+#               Agile model used in the following scenarios:
+#               - Few lenient processes in place and few initial product & regulatory requirements 
+#               - Having a flexible approach towards software development. Priorities and requirements can be easily adjusted during the project to meet the requirements of 
+#               the stakeholders.
+#               
+#               Agile model allows the development to be incremental and iterative, having time in sprint to take place each 1 to 3 weeks each sprint being set in github as 
+#               milestones. This model promotes a disciplined project management process that encourages inspections and adaptations frequently, the systematic process of 
+#               Planning, implementing, building and testing. Additionally this model provides more value to the work of the development team, providing them more time to 
+#               develop the application by reducing those non-productive issues. The QA will be able to track the project status with greater awareness, being able to catch 
+#               and address the issues or bugs quickly by creating it on the github kaman board which will notify the developers on the issues and resolve it as soon as 
+#               possible. 
+#               
+# 3             Waterfall
+#               A linear project management approach, where stakeholders and requirements are gathered at the beginning of the project. A sequential approach is planned out 
+#               to accommodate the requirements. This method is named so that each phrase of the project cascades into the next.
+#               
+#               Advantages: 
+#               - It is a thorough, structured methodology suitable for smaller projects with deliverables that are easy to define. 
+#                 Going through these steps (Shown in figure above) 
+#               - Waterfall relies on the team to follow a sequence of steps, only moving when the previous phase has been completed.
+#               - Able to determine the end goal early 	
+#               - Unlike scrum (Dividing projects into sprints), this method set the end goal as their main focus and has a concrete scheduling of the end date, this eliminates 
+#                 the risk of slowing down or pausing during the process. 
+#               - Transfer information well
+#               - Waterfall approach is highly methodical, it provides a clean transfer of information for each step. This methodology prioritizes accessible information so 
+#                 new additions to the team can get up to speed quickly if required. 
+
+#               Disadvantages:
+#               Changes towards the projects are challenging 
+#               - Waterfall follows a strict set of steps, in the traditional waterfall there is no room for unexpected changes or revisions. To be able to change the parameters 
+#                 of the project, it could render much of the work that will throw of the entire timeline
+#               - Excludes the end user 
+#               - This methodology focuses little on the end user involved in the project. 
+#               - Delay testing until after completion of the project
+#               - Teams have to follow the process of the methodology and wait until the step (testing) to be able to start their trial and error phrase. At this point the 
+#                 project might have taken a considerable time to complete, hence should there be an error that requires a large amount of revision, it can cause severe delays 
+#                 to the project.
+#               
+#               For this assignment, all our requirements are well defined and will not change. We started off the assignment by carrying out requirement gathering and 
+#               documentation. We have also planned out the development schedule with specific end goals in mind, hence reducing time wastage. We will also implement automated 
+#               testing only after our features have been completed.
+#               
+# 4             TBA
 # ==========================================
 
 # PRODUCT BACKLOG
