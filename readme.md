@@ -33,7 +33,7 @@
 
 1. Iterative 
 
-[Picture to be inserted]
+![iterative.png](images/iterative.png)
 
   - Considerations:
     - When the requirements of the complete system are clearly defined and understood.
@@ -45,7 +45,7 @@ In this assignment, all the requirements of the final product are clearly define
 2. Waterfall
 A linear project management approach, where stakeholders and requirements are gathered at the beginning of the project. A sequential approach is planned out to accommodate the requirements. This method is named so that each phrase of the project cascades into the next.
 
-[Picture to be inserted]
+![waterfall.png](images/waterfall.png)
 
 **Advantages:**
 - It is a thorough, structured methodology suitable for smaller projects with deliverables that are easy to define. Going through these steps (Shown in figure above) 
@@ -69,11 +69,11 @@ For this assignment, all our requirements are well defined and will not change. 
 
 Scrum is an agile project management methodology used primarily for software development projects. It is based on a set of very defined practices and roles that must be involved during the software development process. It is a flexible methodology that rewards the application of the 12 agile principles in a context agreed by all the team members of the product. 
 
-[Picture to be inserted]
+![scrum.png](images/scrum.png)
 
 The scrum methodology follows the values and the principles of agile, includes further definitions and specifications, especially regarding certain software development practices. 
 
-[Picture to be inserted]
+![task.png](images/task.png)![sprint.png](images/sprint.png)
 
 The scrum model suggests that the project progresses via a series of sprints. In keeping with an agile methodology, sprints are timeboxed to no more than a month long, most commonly two weeks. One reason why it became our consideration, is due to the fact that this method can be applied on the github web application by setting the milestones as sprints. Additionally, allows the team to keep track of processes via creation of tasks on github and assigning them to the team members of the projects. 
 
@@ -94,7 +94,7 @@ Scrum model allows the development to be incremental and iterative, having time 
 
 4. Big Bang Model
 
-[Picture to be inserted]
+![bb.png](images/bb.png)
 
 The Big Bang model is unique in that it requires virtually no planning, organization, best practices, or typical procedures. Instead, the Big Bang model is fundamentally about simply starting the project right now, at this instant, with no formal development structure or organization.
 
