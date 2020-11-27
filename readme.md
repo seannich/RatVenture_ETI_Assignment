@@ -117,47 +117,18 @@ The design of Big bang model as follows:
 
 Since our assignment isn’t considered as a big project, the big bang model can be used as a last resort if all our previous methodologies have failed. Given the huge risk that this model has, it should only be considered if the team is running out of time to complete the assignment. The simple nature of this model means that the team doesn’t have to waste too much time planning or documenting and can just jump straight into the coding and testing aspect. This would be helpful if the deadline is nearing and there is still a lot to complete as each team member could focus on a feature to try and complete it.
 
-
 ## PRODUCT BACKLOG
 
 |SPRINT NO.|TASKS|         
 | ------------- | ------------- |
 |1|UI Creation|
-| |1.  Create UI for world map|
-| |2.  Create main menu containing various choice numbers
-| | -New game|
-| | -Resume game|
-| | -Exit game|
-| |3.  Create various game menus with the respective choices|
-| | -Town/Outdoor menu|
-| | -Combat menu|
+| |<dl><dt>1. Create UI for world map</dt><dt>2. Create main menu containing various choice numbers</dt><dd>- New game</dd><dd>- Resume game</dd><dd>- Exit game</dd><dt>3.  Create various game menus with the respective choices</dt><dd>- Town/Outdoor menu</dd><dd>- Combat menu</dd><dl>|
 | |Test to see if player input is displayed correctly|
-| |1.  Player choice is displayed correctly for various game menus|
+| |<dl><dt>1.  Player choice is displayed correctly for various game menus</dt></dl>|
 |2|Create functions for town menu|
-| |1.  View character:|
-| | -Shows the player’s damage, defense, health|
-| |2.  View map:|
-| | -Shows world map|
-| |3.  Move:|
-| | -Shows the world map with instructions indicating which key moves the player in which direction.|
-| |-Displays the player’s chosen key.|
-| |-Add 1 day to the time|
-| |4.  Rest:|
-| |-Shows the text “You are fully healed.”|
-| |-Add 1 day to the time|
+| |<dl><dt>1.  View character:</dt><dd> - Shows the player’s damage, defense, health</dd><dt>2.  View map:</dt><dd> -Shows world map</dd><dt>3.  Move:</dt><dd> - Shows the world map with instructions indicating which key moves the player in which direction.</dd><dd>- Displays the player’s chosen key.</dd><dd>- Add 1 day to the time</dd><dt>4.  Rest:</dt><dd>- Shows the text “You are fully healed.”</dd><dd>- Add 1 day to the time</dd></dl>|
 | |Test if appropriate UI shows up and functions are working as intended|
-| |1.  View character:|
-| | -Shows the player’s stats properly. (eg. if player has 10hp it should be reflected there)|
-| |2.  View map:|
-| | -Shows the map with H being where the player currently is.|
-| |3.  Move:|
-| | -Shows the map and its instructions. The player’s chosen key is displayed properly.|
-| | -The position of H moves in the correct direction.|
-| | -Ensure that 1 day is added to the time|
-| |4.  Rest:|
-| | -Rest text is shown|
-| | -Player’s health is reset back to 20 |
-| | -Ensure that 1 day is added to the time|
+| |<dl><dt>1.  View character:</dt><dd> - Shows the player’s stats properly. (eg. if player has 10hp it should be reflected there)</dd><dt>2.  View map:</dt><dd> - Shows the map with H being where the player currently is.</dd><dt>3.  Move:</dt><dd> - Shows the map and its instructions. The player’s chosen key is displayed properly.</dd> - The position of H moves in the correct direction.<dd></dd><dd> - Ensure that 1 day is added to the time</dd><dt>4.  Rest:</dt><dd> - Rest text is shown</dd><dd> - Player’s health is reset back to 20 </dd><dd> - Ensure that 1 day is added to the time</dd></dl>|
 |3|Create functions for combat menu|
 | |1.  Attack:|
 | | -Deal 2-4 damage to enemy|
