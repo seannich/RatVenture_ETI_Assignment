@@ -47,21 +47,21 @@ A linear project management approach, where stakeholders and requirements are ga
 
 [Picture to be inserted]
 
-  - Advantages: 
-    - It is a thorough, structured methodology suitable for smaller projects with deliverables that are easy to define. Going through these steps (Shown in figure above) 
-    - Waterfall relies on the team to follow a sequence of steps, only moving when the previous phase has been completed.
-    - Able to determine the end goal early 	
-    - Unlike scrum (Dividing projects into sprints), this method set the end goal as their main focus and has a concrete scheduling of the end date, this eliminates the risk of slowing down or pausing during the process. 
-    - Transfer information well
-    - Waterfall approach is highly methodical, it provides a clean transfer of information for each step. This methodology prioritizes accessible information so new additions to the team can get up to speed quickly if required. 
+**Advantages:**
+- It is a thorough, structured methodology suitable for smaller projects with deliverables that are easy to define. Going through these steps (Shown in figure above) 
+- Waterfall relies on the team to follow a sequence of steps, only moving when the previous phase has been completed.
+- Able to determine the end goal early 	
+- Unlike scrum (Dividing projects into sprints), this method set the end goal as their main focus and has a concrete scheduling of the end date, this eliminates the risk of slowing down or pausing during the process. 
+- Transfer information well
+- Waterfall approach is highly methodical, it provides a clean transfer of information for each step. This methodology prioritizes accessible information so new additions to the team can get up to speed quickly if required. 
     
-  - Disadvantages:
-    - Changes towards the projects are challenging 
-    - Waterfall follows a strict set of steps, in the traditional waterfall there is no room for unexpected changes or revisions. To be able to change the parameters of the project, it could render much of the work that will throw of the entire timeline
-    - Excludes the end user 
-    - This methodology focuses little on the end user involved in the project. 
-    - Delay testing until after completion of the project
-    - Teams have to follow the process of the methodology and wait until the step (testing) to be able to start their trial and error phrase. At this point the project might have taken a considerable time to complete, hence should there be an error that requires a large amount of revision, it can cause severe delays to the project.
+**Disadvantages:**
+- Changes towards the projects are challenging 
+- Waterfall follows a strict set of steps, in the traditional waterfall there is no room for unexpected changes or revisions. To be able to change the parameters of the project, it could render much of the work that will throw of the entire timeline
+- Excludes the end user 
+- This methodology focuses little on the end user involved in the project. 
+- Delay testing until after completion of the project
+- Teams have to follow the process of the methodology and wait until the step (testing) to be able to start their trial and error phrase. At this point the project might have taken a considerable time to complete, hence should there be an error that requires a large amount of revision, it can cause severe delays to the project.
     
 For this assignment, all our requirements are well defined and will not change. We started off the assignment by carrying out requirement gathering and documentation. We have also planned out the development schedule with specific end goals in mind, hence reducing time wastage. We will also implement automated testing only after our features have been completed.
       
@@ -76,6 +76,20 @@ The scrum methodology follows the values and the principles of agile, includes f
 [Picture to be inserted]
 
 The scrum model suggests that the project progresses via a series of sprints. In keeping with an agile methodology, sprints are timeboxed to no more than a month long, most commonly two weeks. One reason why it became our consideration, is due to the fact that this method can be applied on the github web application by setting the milestones as sprints. Additionally, allows the team to keep track of processes via creation of tasks on github and assigning them to the team members of the projects. 
+
+**Advantages**
+- Easily Scalable
+  - Scrum mechanism is applicable for a single Scrum team and it can additionally be used for larger projects with multiple teams. This has the benefit of achieving better deliverable in line with the needs of the users being met up. It provides the ability to scale modules in terms of design and scopes neatly. 
+- Compliance of expectations
+  - It provides the inclusion of product owners to establish the priorities of the product, hence on a regular basis the product owner will be able to verify the requirements that have been met and give feedback to the team 
+- Flexible to changes
+  - When customer request in changes in requirements, Scrum allows the team to adapt to that situation and develop a quicker response to provide the needs of the user faster to the market
+- Timely Prediction
+Using sprints in methodology, it enables the team to estimate the average time that each feature should be completed. 
+- Reduction of risks
+  - The method allows the understanding of which functionalities are the most vital to start out and knowing the speed that has been established will create opportunities to clear risk effectively in advance.
+
+Scrum model allows the development to be incremental and iterative, having time in sprint to take place each 1 to 3 weeks each sprint being set in github as milestones. This model promotes a disciplined project management process that encourages inspections and adaptations frequently, the systematic process of Planning, implementing, building and testing. Additionally this model provides more value to the work of the development team, providing them more time to develop the application by reducing those non-productive issues. The QA will be able to track the project status with greater awareness, being able to catch and address the issues or bugs quickly by creating it on the github kaman board which will notify the developers on the issues and resolve it as soon as possible. 
 
 
 4. Big Bang Model
