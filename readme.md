@@ -128,59 +128,16 @@ Since our assignment isn’t considered as a big project, the big bang model can
 |2|Create functions for town menu|
 | |<dl><dt>1.  View character:</dt><dd> - Shows the player’s damage, defense, health</dd><dt>2.  View map:</dt><dd> -Shows world map</dd><dt>3.  Move:</dt><dd> - Shows the world map with instructions indicating which key moves the player in which direction.</dd><dd>- Displays the player’s chosen key.</dd><dd>- Add 1 day to the time</dd><dt>4.  Rest:</dt><dd>- Shows the text “You are fully healed.”</dd><dd>- Add 1 day to the time</dd></dl>|
 | |Test if appropriate UI shows up and functions are working as intended|
-| |<dl><dt>1.  View character:</dt><dd> - Shows the player’s stats properly. (eg. if player has 10hp it should be reflected there)</dd><dt>2.  View map:</dt><dd> - Shows the map with H being where the player currently is.</dd><dt>3.  Move:</dt><dd> - Shows the map and its instructions. The player’s chosen key is displayed properly.</dd> - The position of H moves in the correct direction.<dd></dd><dd> - Ensure that 1 day is added to the time</dd><dt>4.  Rest:</dt><dd> - Rest text is shown</dd><dd> - Player’s health is reset back to 20 </dd><dd> - Ensure that 1 day is added to the time</dd></dl>|
+| |<dl><dt>1.  View character:</dt><dd> - Shows the player’s stats properly. (eg. if player has 10hp it should be reflected there)</dd><dt>2.  View map:</dt><dd> - Shows the map with H being where the player currently is.</dd><dt>3.  Move:</dt><dd> - Shows the map and its instructions. The player’s chosen key is displayed properly.</dd><dd> - The position of H moves in the correct direction.</dd><dd> - Ensure that 1 day is added to the time</dd><dt>4.  Rest:</dt><dd> - Rest text is shown</dd><dd> - Player’s health is reset back to 20 </dd><dd> - Ensure that 1 day is added to the time</dd></dl>|
 |3|Create functions for combat menu|
-| |1.  Attack:|
-| | -Deal 2-4 damage to enemy|
-| | -Display damage dealt to enemy|
-| | -Damage dealt is calculated after deducting enemy defense from player’s attack||
-| | -Display damage taken from enemy|
-| | -Damage taken follows same calculation as damage dealt|
-| | -Display remaining health|
-| | -Display outdoor menu if enemy is defeated|
-| |2.  Run:|
-| | -Displays outdoor menu|
+| |<dl><dt>1.  Attack:</dt><dd> - Deal 2-4 damage to enemy</dd><dd> - Display damage dealt to enemy</dd><dd> - Damage dealt is calculated after deducting enemy defense from player’s attack</dd><dd> - Display damage taken from enemy</dd><dd> - Damage taken follows same calculation as damage dealt</dd><dd> - Display remaining health</dd><dd> - Display outdoor menu if enemy is defeated</dd><dt>2.  Run:</dt><dd> - Displays outdoor menu</dd></dl>|
 | |Update town menu into outdoor menu|
-| |1.  Display the following choices:|
-| | -View character|
-| | -View map|
-| | -Move|
-| | -Exit game|
-| |2.  If player ran, view character and view map brings player back into combat|
-| |3.  If brought into combat, enemy will recover all its health|
+| |<dl><dt>1.  Display the following choices:</dt><dd> - View character</dd><dd> - View map</dd><dd> - Move</dd><dd> - Exit game</dd><dt>2.  If player ran, view character and view map brings player back into combat</dt><dt>3.  If brought into combat, enemy will recover all its health</dt></dl>|
 | |Test combat menu|
-| |1.  Attack:|
-| | -Damage is between 2-4|
-| | -Damage dealt is displayed correctly|
-| | -Player remaining health is displayed correctly|
-| | -Enemy remaining health is displayed correctly|
-| | -Outdoor menu is displayed after enemy is defeated|
-| |2.  Run:|
-| | -Outdoor menu is displayed|
+| |<dl><dt>1.  Attack:</dt><dd> - Damage is between 2-4</dd><dd> - Damage dealt is displayed correctly</dd><dd> - Player remaining health is displayed correctly</dd><dd> - Enemy remaining health is displayed correctly</dd><dd> - Outdoor menu is displayed after enemy is defeated</dd><dt>2.  Run:</dt><dd> - Outdoor menu is displayed</dd></dl>|
 | |Test outdoor menu|
-| |1.  The correct choices are shown|
-| |2.  If player ran, player is brought back into combat menu if view character or view map is chosen|
-| |3.  If brought back into combat, enemy has recovered all its health|
+| |<dl><dt>1.  The correct choices are shown</dt><dt>2.  If player ran, player is brought back into combat menu if view character or view map is chosen</dt><dt>3.  If brought back into combat, enemy has recovered all its health</dt></dl>|
 |4|Saving player progress|
-| |1.  New game:|
-| | -New game is created with the player starting at the original position with full health.|
-| |2.  Save game:|
-| | -Player progression is saved into .csv file|
-| | -Overrides previous save file|
-| |3.  Resume game:|
-| | -Game reads progress from existing .csv file|
-| |4.  Exit game:|
-| | -Program stops running|
+| |<dl><dt>1.  New game:</dt><dd> - New game is created with the player starting at the original position with full health.</dd><dt>2.  Save game:</dt><dd> - Player progression is saved into .csv file</dd><dd> - Overrides previous save file</dd><dt>3.  Resume game:</dt><dd> - Game reads progress from existing .csv file</dd><dt>4.  Exit game:</dt><dd> - Program stops running</dd></dl>|
 | |Testing player saves|
-| |1.  New game:|
-| | -Player should be at full health|
-| | -Player should have no progress|
-| |2.  Save game:|
-| | -Player progress is written into a .csv file|
-| | -.csv file is created if there is no existing one|
-| | -Existing .csv file is overwritten|
-| |3.  Resume game:|
-| | -Program successfully reads save file|
-| | -Displays error message if unable to do so|
-| |4.  Exit game:|
-| | -Program stops running successfully|
+| |<dl><dt>1.  New game:</dt><dd> - Player should be at full health</dd><dd> - Player should have no progress</dd><dt>2.  Save game:</dt><dd> - Player progress is written into a .csv file</dd><dd> - .csv file is created if there is no existing one</dd><dd> - Existing .csv file is overwritten</dd><dt>3.  Resume game:</dt><dd> - Program successfully reads save file</dd><dd> - Displays error message if unable to do so</dd><dt>4.  Exit game:</dt><dd> - Program stops running successfully</dd></dl>|
