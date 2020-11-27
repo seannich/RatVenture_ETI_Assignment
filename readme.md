@@ -14,12 +14,17 @@
 |    |    |    |As a player I want to be able to view my character’s defence so that I know how well I defend against enemies.|
 |    |    |    |As a player I want to be able to view my character’s health so that I know when I’m supposed to heal myself.|
 |    |    |View Map|As a player I want to be able to view my character on the map so that I can plan out my next move.|
-|    |    |Move |As a player I want to be able to leave the town so that I can progress to the end.|
+|    |    |Move |As a player I want movement instructions so that I know where I am moving my character.|
+|    |    |    |As a player I want to see my selected movement key so I have confirmation on pressing the correct movement key.|
 |    |    |Rest|As a player I want to be able to rest so that I can restore my health.|
 |3|Functions Creation for Combat|Attack|As a player I want to be able to attack during a fight so that I can defeat the opponent.|
+|    |    |    |As a player I want to be able to see how much damage I did to the enemy so that I know if I can defeat the enemy.|
+|    |    |    |As a player I want to be able to see how much damage I’ve taken from the enemy so that I know how to plan my next move.|
+|    |    |    |As a player I want to be able to have updates on my health so that I can plan my next move.|
 |    |    |Run|As a player I want to be able to run away from a fight so that I can prevent myself from dying if I am low on health.|
 |4|Saving Player Progress|New Game|As a player I want to be able to start a new game so that I can play the game.|
 |    |    |Save Game|As a player I want to be able to save the game so that I can pause and come back to the game another time.|
+|    |    |Save Game|As a player I want my game to override my previous save file so that I do not waste space on my computer.|
 |    |    |Resume Game|As a player I want to load up a save of my previous game so that I can continue from where I stopped previously.|
 |    |    |Exit Game|As a player I want to be able to exit the game so that I can stop playing and come back another time.|
 
