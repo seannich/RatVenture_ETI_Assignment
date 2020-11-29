@@ -1,6 +1,7 @@
 # RatVenture
 # The Team
-- QA - Adeline, Sean 
+- Scrum Master - Sean
+- QA - Adeline
 - Developers - Naomi, Gerald 
 
 
