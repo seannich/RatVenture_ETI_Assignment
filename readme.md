@@ -28,7 +28,7 @@
 |    |    |Run|As a player I want to be able to run away from a fight so that I can prevent myself from dying if I am low on health.|
 |4|Saving Player Progress|New Game|As a player I want to be able to start a new game so that I can play the game.|
 |    |    |Save Game|As a player I want to be able to save the game so that I can pause and come back to the game another time.|
-|    |    |Save Game|As a player I want my game to override my previous save file so that I do not waste space on my computer.|
+|    |    |    |As a player I want my game to override my previous save file so that I do not waste space on my computer.|
 |    |    |Resume Game|As a player I want to load up a save of my previous game so that I can continue from where I stopped previously.|
 |    |    |Exit Game|As a player I want to be able to exit the game so that I can stop playing and come back another time.|
 
