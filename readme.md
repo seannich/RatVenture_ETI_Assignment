@@ -1,4 +1,7 @@
 # RatVenture
+# The Team
+- QA - Adeline, Sean 
+- Developers - Naomi, Gerald 
 
 
 ## USER STORIES
@@ -30,7 +33,12 @@
 
 
 ## METHODLOGOIES CONSIDERED
+1. Iterative Model
+2. Waterfall Model
+3. Scrum Model [Chosen]
+4. Big Bang Model
 
+## Why We Considered
 1. Iterative 
 
 ![iterative.png](images/iterative.png)
