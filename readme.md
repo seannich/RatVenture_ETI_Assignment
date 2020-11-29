@@ -39,7 +39,7 @@
 4. Big Bang Model
 
 ## Why We Considered
-1. Iterative 
+### 1. Iterative 
 
 ![iterative.png](images/iterative.png)
 
@@ -50,7 +50,7 @@
   
 In this assignment, all the requirements of the final product are clearly defined and understood. The timeline of the different development stages have been planned out in the Sprint Log. Each sprint we release a specific set of usable features, which are enhanced in the next sprint by other features. The features will be more advanced as each sprint passes, for example the first sprint will be simply creating the UI of the various game menus. The following sprints will be the actual development of the game functions such as Move, Rest and so on. As the Iterative Model allows accessing previous phases, we will be able to access the code from the previous sprints if any changes have to be made to the existing features. We will also be using a new technology, PyTest, to run the automated tests.
           
-2. Waterfall
+### 2. Waterfall
 
 A linear project management approach, where stakeholders and requirements are gathered at the beginning of the project. A sequential approach is planned out to accommodate the requirements. This method is named so that each phrase of the project cascades into the next.
 
@@ -74,7 +74,7 @@ A linear project management approach, where stakeholders and requirements are ga
     
 For this assignment, all our requirements are well defined and will not change. We started off the assignment by carrying out requirement gathering and documentation. We have also planned out the development schedule with specific end goals in mind, hence reducing time wastage. We will also implement automated testing only after our features have been completed.
       
-3. Scrum Model (***Chosen***)
+### 3. Scrum Model (***Chosen***)
 
 Scrum is an agile project management methodology used primarily for software development projects. It is based on a set of very defined practices and roles that must be involved during the software development process. It is a flexible methodology that rewards the application of the 12 agile principles in a context agreed by all the team members of the product. 
 
@@ -101,7 +101,7 @@ Using sprints in methodology, it enables the team to estimate the average time t
 Scrum model allows the development to be incremental and iterative, having time in sprint to take place each 1 to 3 weeks each sprint being set in github as milestones. This model promotes a disciplined project management process that encourages inspections and adaptations frequently, the systematic process of Planning, implementing, building and testing. Additionally this model provides more value to the work of the development team, providing them more time to develop the application by reducing those non-productive issues. The QA will be able to track the project status with greater awareness, being able to catch and address the issues or bugs quickly by creating it on the github kaman board which will notify the developers on the issues and resolve it as soon as possible. 
 
 
-4. Big Bang Model
+### 4. Big Bang Model
 
 ![bb.png](images/bb.png)
 
