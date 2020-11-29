@@ -76,15 +76,15 @@ For this assignment, all our requirements are well defined and will not change. 
       
 ### 3. Scrum Model (***Chosen***)
 
-Scrum is an agile project management methodology used primarily for software development projects. It is based on a set of very defined practices and roles that must be involved during the software development process. It is a flexible methodology that rewards the application of the 12 agile principles in a context agreed by all the team members of the product. 
+Scrum is an agile project management methodology used primarily for software development projects. It is based on a set of very defined practices and roles that must be involved during the software development process. It is a flexible agile project management framework that rewards the application of the 12 agile principles in a context agreed by all the team members of the product. 
 
 ![scrum.png](images/scrum.png)
 
-The scrum methodology follows the values and the principles of agile, includes further definitions and specifications, especially regarding certain software development practices. 
+The scrum methodology follows the values and the principles of agile, includes further definitions and specifications, especially regarding certain software development practices. Though scrum and agile are thought to be the same thing, however scrum is centered around continuous improvement and “getting work done”. In a way it acknowledges that the team doesn’t know everything at the start of a project and will evolve through experience.
 
 ![task.png](images/task.png)![sprint.png](images/sprint.png)
 
-The scrum model suggests that the project progresses via a series of sprints. In keeping with an agile methodology, sprints are timeboxed to no more than a month long, most commonly two weeks. One reason why it became our consideration, is due to the fact that this method can be applied on the github web application by setting the milestones as sprints. Additionally, allows the team to keep track of processes via creation of tasks on github and assigning them to the team members of the projects. 
+The scrum model suggests that the project progresses via a series of sprints. In keeping with an agile methodology, sprints are timeboxed to no more than a month long, most commonly two weeks. One reason why it became our consideration, is due to the fact that this method can be applied on the github web application by setting the milestones as sprints. Additionally, allows the team to keep track of processes via creation of tasks on github and assigning them to the team members of the projects.
 
 **Advantages**
 - Easily Scalable
@@ -98,8 +98,8 @@ Using sprints in methodology, it enables the team to estimate the average time t
 - Reduction of risks
   - The method allows the understanding of which functionalities are the most vital to start out and knowing the speed that has been established will create opportunities to clear risk effectively in advance.
 
-Scrum model allows the development to be incremental and iterative, having time in sprint to take place each 1 to 3 weeks each sprint being set in github as milestones. This model promotes a disciplined project management process that encourages inspections and adaptations frequently, the systematic process of Planning, implementing, building and testing. Additionally this model provides more value to the work of the development team, providing them more time to develop the application by reducing those non-productive issues. The QA will be able to track the project status with greater awareness, being able to catch and address the issues or bugs quickly by creating it on the github kaman board which will notify the developers on the issues and resolve it as soon as possible. 
-
+The Scrum model allows the development to be incremental and iterative, having time in sprint to take place each 1 to 3 weeks each sprint being set in github as milestones. This model promotes a disciplined project management process that encourages inspections and adaptations frequently, the systematic process of Planning, implementing, building and testing. Additionally this model provides more value to the work of the development team, providing them more time to develop the application by reducing those non-productive issues. The QA will be able to track the project status with greater awareness, being able to catch and address the issues or bugs quickly by creating it on the github kaman board which will notify the developers on the issues and resolve it as soon as possible. 
+This model provides the structure of having clear communication between the team, transparency and dedication for continuous improvements on the project. Additionally, it is structured to help the team naturally adapt to the changing conditions and user requirements of the project, with re-prioritization built into the process and with their short sprints to release features, it aids the team to constantly learn and improve on the go. Hence reason being to Scrum Model to be our main consideration.
 
 ### 4. Big Bang Model
 
