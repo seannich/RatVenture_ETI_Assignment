@@ -3,7 +3,13 @@
 - Scrum Master - Sean
 - QA - Adeline
 - Developers - Naomi, Gerald 
-
+## Scope
+> You are The Hero. The world is being invaded by the Rat King and his endless rat minions.
+The only way to defeat the Rat King is to find the Orb of Power located in the faraway
+land of Katalina.
+In this computer role-playing game, you will travel around a grid map searching for the
+Orb of Power and fighting rat minions. On the map are various towns where you can rest
+and save your game. Once you find the Orb of Power, the Rat King loses.
 
 ## USER STORIES
 |      NO.      |    FEATURE    |  SUB FEATURE  |   USER STORY  |
@@ -32,6 +38,9 @@
 |    |    |Resume Game|As a player I want to load up a save of my previous game so that I can continue from where I stopped previously.|
 |    |    |Exit Game|As a player I want to be able to exit the game so that I can stop playing and come back another time.|
 
+
+## Test Case
+https://docs.google.com/spreadsheets/d/1REM_Zuic9MikKO7BMGfUAbZG_yLYqEZaIX6TLMytje0/edit?usp=sharing
 
 ## METHODLOGOIES CONSIDERED
 1. Iterative Model
