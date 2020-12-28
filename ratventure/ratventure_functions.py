@@ -58,3 +58,78 @@ def townMenu():
         return "Invalid number. Please try again."
     else:
         return choice
+
+def outdoorMenuUI(): #N
+    """
+    
+    1) View Character
+    2) View Map
+    3) Move
+    4) Exit Game
+
+    """
+    os.system('cls')
+    outdoorMenuUI = "1) View Character\n2) View Map\n3) Move\n4) Exit Game"
+    print(outdoorMenuUI)
+
+        #outdoorMenu()
+    return outdoorMenuUI
+
+def outdoorMenu():
+    """
+    takes in and displays player input choice
+    """
+    choice = input("Enter choice: ")
+    return choice
+
+
+def attackMenuUI(): #N
+ 
+    "You deal" + damage "to the Rat"
+    "Ouch! The Rat hit you for" + damage "!"
+    "You have" + hp + "HP left."
+    "Encounter! - Rat"
+    "Damage:" + damage
+    "Defence:" + defence
+    "HP:" + hp
+    "1) Attack"
+    "2) Run""
+
+
+    os.system('cls')
+    attackMenuUI = "1) View Character\n2) View Map\n3) Move\n4) Exit Game"
+    print(attackMenuUI)
+
+        #attackMenu()
+    return attackMenuUI
+
+def attackMenu():
+    """
+    takes in and displays player input choice
+    """
+    choice = input("Enter choice: ")
+    return choice
+
+def runMenuUI(): #N
+ """
+    You run and hide.
+    1) View Character
+    2) View Map
+    3) Move
+    4) Exit Game
+"""
+
+    os.system('cls')
+    runMenuUI = " You run and hide.\n1) View Character\n2) View Map\n3) Move\n4) Exit Game"
+    print(runMenuUI)
+
+        #runMenu()
+    return runMenuUI
+
+def runMenu():
+    """
+    takes in and displays player input choice
+    """
+    choice = input("Enter choice: ")
+    return choice
+    
