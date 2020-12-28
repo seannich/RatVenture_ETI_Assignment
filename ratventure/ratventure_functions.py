@@ -94,6 +94,9 @@ while choice =='0':
             +---+---+---+---+---+---+---+---+")  #-> x axis
 """
 def mapUI():
+    """
+    Function to create map UI
+    """
 
     map = "+---+---+---+---+---+---+---+---+\n"
     for x in range(1,65):
