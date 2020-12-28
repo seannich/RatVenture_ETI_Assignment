@@ -23,7 +23,7 @@ while choice =='0':
         print("Defence:" + defence)
         print("     HP:" + hp)
 
-    elif choice == "2":
+    elif choice == "2": 
         print("Enter choice: 2") #Display map
         print("+---+---+---+---+---+---+---+---+ \
                |H/T|   |   |   |   |   |   |   | \
