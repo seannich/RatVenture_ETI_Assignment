@@ -22,8 +22,12 @@ def mainMenu():
     """
     takes in and displays player input choice
     """
-    choice = input("Enter choice: ")
-    return choice
+    choice = int(input("Enter choice: "))
+    if choice > 3 or choice < 0 :
+        print("Invalid number. Please try again.")
+        return "Invalid number. Please try again."
+    else:
+        return choice
 
 def townMenuUI(): #N
     """
@@ -48,5 +52,9 @@ def townMenu():
     """
     takes in and displays player input choice
     """
-    choice = input("Enter choice: ")
-    return choice
+    choice = int(input("Enter choice: "))
+    if choice > 6 or choice < 0 :
+        print("Invalid number. Please try again.")
+        return "Invalid number. Please try again."
+    else:
+        return choice
