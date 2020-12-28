@@ -29,7 +29,7 @@ def mainMenu():
     else:
         return choice
 
-def townMenuUI(): #N
+def townMenuUI():
     """
     
     Day 1: You are in a town.
@@ -41,11 +41,9 @@ def townMenuUI(): #N
     6) Exit Game
 
     """
-    os.system('cls')
     townmenuUI = "Day 1: You are in a town.\n1) View Character\n2) View Map\n3) Move\n4) Rest\n5) Save Game\n6) Exit Game"
     print(townmenuUI)
 
-        #townMenu()
     return townmenuUI
 
 def townMenu():
@@ -59,7 +57,7 @@ def townMenu():
     else:
         return choice
 
-def outdoorMenuUI(): #N
+def outdoorMenuUI():
     """
     
     1) View Character
@@ -68,23 +66,22 @@ def outdoorMenuUI(): #N
     4) Exit Game
 
     """
-    os.system('cls')
     outdoorMenuUI = "1) View Character\n2) View Map\n3) Move\n4) Exit Game"
     print(outdoorMenuUI)
 
-        #outdoorMenu()
     return outdoorMenuUI
 
 def outdoorMenu():
     """
     takes in and displays player input choice
     """
-    choice = input("Enter choice: ")
-    return choice
-
-
-def attackMenuUI(): #N
- 
+    choice = int(input("Enter choice: "))
+    if choice > 4 or choice < 0 :
+        print("Invalid number. Please try again.")
+        return "Invalid number. Please try again."
+    else:
+        return choice
+"""
     "You deal" + damage "to the Rat"
     "Ouch! The Rat hit you for" + damage "!"
     "You have" + hp + "HP left."
@@ -92,44 +89,27 @@ def attackMenuUI(): #N
     "Damage:" + damage
     "Defence:" + defence
     "HP:" + hp
-    "1) Attack"
-    "2) Run""
+"""
+def attackMenuUI(): #N
 
+    """
+    1) Attack
+    2) Run
+    """
 
-    os.system('cls')
-    attackMenuUI = "1) View Character\n2) View Map\n3) Move\n4) Exit Game"
+    attackMenuUI = "1) Attack\n2) Run"
     print(attackMenuUI)
 
-        #attackMenu()
     return attackMenuUI
 
 def attackMenu():
     """
     takes in and displays player input choice
     """
-    choice = input("Enter choice: ")
-    return choice
+    choice = int(input("Enter choice: "))
+    if choice > 2 or choice < 0 :
+        print("Invalid number. Please try again.")
+        return "Invalid number. Please try again."
+    else:
+        return choice
 
-def runMenuUI(): #N
- """
-    You run and hide.
-    1) View Character
-    2) View Map
-    3) Move
-    4) Exit Game
-"""
-
-    os.system('cls')
-    runMenuUI = " You run and hide.\n1) View Character\n2) View Map\n3) Move\n4) Exit Game"
-    print(runMenuUI)
-
-        #runMenu()
-    return runMenuUI
-
-def runMenu():
-    """
-    takes in and displays player input choice
-    """
-    choice = input("Enter choice: ")
-    return choice
-    
