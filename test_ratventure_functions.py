@@ -12,8 +12,8 @@ def test_mainMenu(monkeypatch):
     assert value == 1
 
 def test_townMenuUI():
-    value = mainMenuUI()
-    assert value == "Enter choice: 1\nDay 1: You are in a town.\n1) View Character\n2) View Map\n3) Move\n4) Rest\n5) Save Game\n6) Exit Game\nEnter choice:"
+    value = townMenuUI()
+    assert value == "Day 1: You are in a town.\n1) View Character\n2) View Map\n3) Move\n4) Rest\n5) Save Game\n6) Exit Game"
 
 def test_townMenu(monkeypatch):
     monkeypatch.setattr("builtins.input", lambda _: 1)

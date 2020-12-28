@@ -27,8 +27,7 @@ def mainMenu():
 
 def townMenuUI(): #N
     """
-    Enter choice: 1
-
+    
     Day 1: You are in a town.
     1) View Character
     2) View Map
@@ -36,11 +35,10 @@ def townMenuUI(): #N
     4) Rest
     5) Save Game
     6) Exit Game
-    Enter choice:
 
     """
     os.system('cls')
-    townmenuUI = "Welcome to Ratventure!\n----------------------\n1) New Game\n2) Resume Game\n3) Exit Game"
+    townmenuUI = "Day 1: You are in a town.\n1) View Character\n2) View Map\n3) Move\n4) Rest\n5) Save Game\n6) Exit Game"
     print(townmenuUI)
 
         #townMenu()

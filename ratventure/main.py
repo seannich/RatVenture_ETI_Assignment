@@ -1,6 +1,7 @@
 import os
 from ratventure.ratventure_functions import *
 
-mainMenuUI()
-mainMenu()
-
+#mainMenuUI()
+#mainMenu()
+townMenuUI()
+townMenu()
