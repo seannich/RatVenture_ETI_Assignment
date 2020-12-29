@@ -9,3 +9,6 @@ from ratventure_functions import *
 #outdoorMenu()
 #attackMenuUI()
 #attackMenu()
+from ratventure_functions import *
+
+mapUI()
