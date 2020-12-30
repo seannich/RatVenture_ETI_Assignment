@@ -19,7 +19,7 @@ class Player:
         self.locationTag = 'H'
 
 player = Player()
-
+ 
 def mainMenuUI():
     """
     Displays UI for main menu
