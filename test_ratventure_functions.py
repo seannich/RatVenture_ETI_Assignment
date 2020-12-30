@@ -53,6 +53,7 @@ def test_townMenu(monkeypatch):
     value = townMenu()
     assert value == 1
 
+# test town menu invalid number
 
 # TC - OUTDOOR MENU ================================
 def test_outdoorMenuUI():
@@ -143,3 +144,30 @@ def test_mapUI():
     """
     value = mapUI()
     assert value == "+---+---+---+---+---+---+---+---+\n| T |   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   | T |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   | T |   |   |\n+---+---+---+---+---+---+---+---+\n|   | T |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   | T |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   | K |\n+---+---+---+---+---+---+---+---+\n"
+
+# TC - Hero Statistic 
+def test_herostats(monkeypatch):
+    ''' 
+    enter choice: 1
+    This function prints out the player's name, damage, defence and HP.
+    Expected Output: 
+    The Hero
+    Damage: 2-4
+    Defence: 1
+    HP: 20
+    '''
+    monkeypatch.setattr("builtins.input", lambda _: 1)  
+    value = herostats()
+    assert value == "The Hero\nDamage: 2-4\nDefence: 1\nHP: 20"
+
+# TC -  Hero Rest 
+def test_herorest(monkeypatch):
+    '''
+    enter choice:4
+    This function restores the player to 20, adds 1 day to the day count and prints out "You are fully healed".
+    Expected Output:
+    (20, 2)
+    '''
+    monkeypatch.setattr("builtins.input", lambda _: 4)  
+    value = herorest()
+    assert value == (20, 2)
