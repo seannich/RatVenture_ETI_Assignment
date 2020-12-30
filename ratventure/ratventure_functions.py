@@ -1,18 +1,24 @@
 import os
-#Player class for when the player first starts the game
+import sys
+import pickle
+
 class Player:
+    """
+    Player class for when the player first starts the game
+    """
     def __init__(self):
-        Player.name = 'The Hero'
-        Player.damage = '2-4'
-        Player.minDamage = 2
-        Player.maxDamage = 4
-        Player.defence = 1
-        Player.hp = 20
-        Player.day = 1
-        #self.positionX = 0  delete if unneeded 
-        #self.positionY = 0  delete if unneeded 
-        Player.location = 'You are in a Town'
-        Player.locationTag = 'H'
+        self.name = 'The Hero'
+        self.damage = '2-4'
+        self.minDamage = 2
+        self.maxDamage = 4
+        self.defence = 1
+        self.hp = 20
+        self.day = 1
+        self.position = 1
+        self.location = 'You are in a Town'
+        self.locationTag = 'H'
+
+player = Player()
 
 def mainMenuUI():
     """
@@ -45,7 +51,8 @@ def mainMenu():
 
 def townMenuUI():
     """
-    
+    Displays UI for town menu
+
     Day 1: You are in a town.
     1) View Character
     2) View Map
@@ -73,7 +80,8 @@ def townMenu():
 
 def outdoorMenuUI():
     """
-    
+    Displays UI for outdoor menu
+
     1) View Character
     2) View Map
     3) Move
@@ -104,9 +112,10 @@ def outdoorMenu():
     "Defence:" + defence
     "HP:" + hp
 """
-def attackMenuUI(): #N
-
+def attackMenuUI():
     """
+    Displays UI for town menu
+
     1) Attack
     2) Run
     """
@@ -126,9 +135,6 @@ def attackMenu():
         return "Invalid number. Please try again."
     else:
         return choice
-import sys
-import pickle
-
 """
 def main():
 
@@ -202,28 +208,28 @@ while choice =='0':
     #data = pickle.load(f)
 
 """
-"""
-    map = ("+---+---+---+---+---+---+---+---+ \
-            | T |   |   |   |   |   |   |   | \
-            +---+---+---+---+---+---+---+---+ \
-            |   |   |   | T |   |   |   |   | \
-            +---+---+---+---+---+---+---+---+ \
-            |   |   |   |   |   | T |   |   | \
-            +---+---+---+---+---+---+---+---+ \
-            |   | T |   |   |   |   |   |   | \
-            +---+---+---+---+---+---+---+---+ \
-            |   |   |   |   |   |   |   |   | \
-            +---+---+---+---+---+---+---+---+ \
-            |   |   |   |   |   |   |   |   | \
-            +---+---+---+---+---+---+---+---+ \
-            |   |   |   |   | T |   |   |   | \
-            +---+---+---+---+---+---+---+---+ \
-            |   |   |   |   |   |   |   | K | \
-            +---+---+---+---+---+---+---+---+")  #-> x axis
-"""
+
 def mapUI():
     """
-    Function to create map UI
+    Displays UI for map
+
+    +---+---+---+---+---+---+---+---+ 
+    | T |   |   |   |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   | T |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   |   | T |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   | T |   |   |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   | T |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   |   |   |   | K | 
+    +---+---+---+---+---+---+---+---+
     """
 
     map = "+---+---+---+---+---+---+---+---+\n"
