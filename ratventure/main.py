@@ -10,3 +10,4 @@ from ratventure_functions import *
 #attackMenuUI()
 #attackMenu()
 #mapUI()
+#playerMovement()
