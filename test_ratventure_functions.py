@@ -53,7 +53,15 @@ def test_townMenu(monkeypatch):
     value = townMenu()
     assert value == 1
 
-# test town menu invalid number
+def test_townMenu_invalid(monkeypatch):
+    """
+    Input: b
+
+    Output: Invalid number. Please try again.
+    """
+    monkeypatch.setattr("builtins.input", lambda _: 9)  
+    value = townMenu()
+    assert value == "Invalid number. Please try again."
 
 # TC - OUTDOOR MENU ================================
 def test_outdoorMenuUI():
@@ -79,7 +87,7 @@ def test_outdoorMenu(monkeypatch):
     value = outdoorMenu()
     assert value == 1
 
-def test_outdoorMenu_error(monkeypatch):
+def test_outdoorMenu_invalid(monkeypatch):
     """
     Input: 6
 
