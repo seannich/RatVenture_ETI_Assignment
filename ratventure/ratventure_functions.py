@@ -17,7 +17,7 @@ class Player:
         self.position = 1
         self.location = 'You are in a Town'
         self.locationTag = 'H'
-
+ 
 player = Player()
 
 def mainMenuUI():
