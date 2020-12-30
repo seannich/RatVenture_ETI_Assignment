@@ -1,4 +1,18 @@
 import os
+#Player class for when the player first starts the game
+class Player:
+    def __init__(self):
+        Player.name = 'The Hero'
+        Player.damage = '2-4'
+        Player.minDamage = 2
+        Player.maxDamage = 4
+        Player.defence = 1
+        Player.hp = 20
+        Player.day = 1
+        #self.positionX = 0  delete if unneeded 
+        #self.positionY = 0  delete if unneeded 
+        Player.location = 'You are in a Town'
+        Player.locationTag = 'H'
 
 def mainMenuUI():
     """
