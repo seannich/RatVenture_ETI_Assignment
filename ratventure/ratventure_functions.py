@@ -21,12 +21,25 @@ class Player:
 player = Player()
 
 def herostats():
+    ''' 
+    This function prints out the player's name, damage, defence and HP.
+    Expected Output: 
+    The Hero
+    Damage: 2-4
+    Defence: 1
+    HP: 20
+    '''
     stats = player.name + "\nDamage: {}\nDefence: {}\nHP: {}".format(player.damage,player.defence,player.hp)
     print(stats)
 
     return stats
 
 def herorest():
+    '''
+    This function restores the player to 20, adds 1 day to the day count and prints out "You are fully healed".
+    Expected Output:
+    20 2
+    '''
     player.hp = 20
     player.day += 1
     print("You are fully healed.")
