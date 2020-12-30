@@ -19,7 +19,13 @@ class Player:
         self.locationTag = 'H'
 
 player = Player()
- 
+
+def herostats():
+    stats = player.name + "\nDamage: {}\nDefence: {}\nHP: {}".format(player.damage,player.defence,player.hp)
+    print(stats)
+
+    return stats
+
 def mainMenuUI():
     """
     Displays UI for main menu
