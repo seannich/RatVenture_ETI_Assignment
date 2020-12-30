@@ -151,11 +151,6 @@ def test_playerMovement_oob(monkeypatch):
     """
     This function shows the map UI and allows player to move their character.
     Player postion starts at 1.
-    
-    W: player.postion -8
-    A: player.postion -1
-    S: player.postion +8
-    D: player.postion +1
 
     If player goes outside of map: How about we explore the area ahead of us later.
 
@@ -169,11 +164,6 @@ def test_playerMovement_invalid(monkeypatch):
     This function shows the map UI and allows player to move their character.
     Player postion starts at 1.
 
-    W: player.postion -8
-    A: player.postion -1
-    S: player.postion +8
-    D: player.postion +1
-
     If player chooses something other than wasd: Please select a valid option.
 
     """
@@ -185,11 +175,6 @@ def test_playerMovement_invalid(monkeypatch):
     """
     This function shows the map UI and allows player to move their character.
     Player postion starts at 1.
-
-    W: player.postion -8
-    A: player.postion -1
-    S: player.postion +8
-    D: player.postion +1
 
     If player chooses acceptable choice: return player postition
 
