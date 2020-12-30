@@ -11,3 +11,4 @@ from ratventure_functions import *
 #attackMenu()
 #mapUI()
 herostats()
+herorest()

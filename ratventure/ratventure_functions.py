@@ -26,6 +26,13 @@ def herostats():
 
     return stats
 
+def herorest():
+    player.hp = 20
+    player.day += 1
+    print("You are fully healed.")
+
+    return player.hp, player.day
+    
 def mainMenuUI():
     """
     Displays UI for main menu
