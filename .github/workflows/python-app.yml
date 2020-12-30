@@ -4,8 +4,6 @@
 name: Python CI with report
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]   
   
