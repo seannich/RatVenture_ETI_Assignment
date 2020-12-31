@@ -12,3 +12,4 @@ from ratventure_functions import *
 #mapUI()
 herostats()
 herorest()
+#playerMovement()

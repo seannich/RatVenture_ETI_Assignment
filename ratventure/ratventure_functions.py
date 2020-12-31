@@ -17,7 +17,7 @@ class Player:
         self.position = 1
         self.location = 'You are in a Town'
         self.locationTag = 'H'
-
+ 
 player = Player()
 
 def herostats():
@@ -45,6 +45,132 @@ def herorest():
     print("You are fully healed.")
 
     return player.hp, player.day
+def mapUI(position):
+    """
+    Displays UI for map
+
+    +---+---+---+---+---+---+---+---+ 
+    | T |   |   |   |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   | T |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   |   | T |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   | T |   |   |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   |   |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   | T |   |   |   | 
+    +---+---+---+---+---+---+---+---+ 
+    |   |   |   |   |   |   |   | K | 
+    +---+---+---+---+---+---+---+---+
+    """
+
+    map = "+---+---+---+---+---+---+---+---+\n"
+    townPosition = [1,12,22,26,53]
+
+    for x in range(1,65):
+        if (x % 8) == 0 and x != 64:
+            map += "|   |\n+---+---+---+---+---+---+---+---+\n"
+        elif x in townPosition:
+            if x == position:
+                map += "|H/T"
+            else:
+                map += "| T "
+        elif x == 64:
+            if x == position:
+                map += "|H/K|\n+---+---+---+---+---+---+---+---+\n"
+            else:
+                map += "| K |\n+---+---+---+---+---+---+---+---+\n"
+        elif x == position and x != townPosition and x != 64:
+            map += "| H "
+        else:
+            map += "|   "
+    
+    print(map)
+    return(map)
+
+def playerMovement():
+    """
+    This function shows the map UI and allows player to move their character.
+    Player postion starts at 1.
+    
+    W: player.postion -8
+    A: player.postion -1
+    S: player.postion +8
+    D: player.postion +1
+
+    If player goes outside of map: How about we explore the area ahead of us later.
+
+    If player chooses something other than wasd: Please select a valid option.
+
+    If player chooses acceptable choice: return player postition
+
+    """
+    position = player.position
+
+    topWall = [1,2,3,4,5,6,7,8]
+    leftWall = [1,9,17,25,33,41,49,57]
+    bottomWall = [57,58,59,60,61,62,63,64]
+    rightWall = [8,16,24,32,40,48,56,64]
+    posibleChoice = ["w", "a", "s", "d"]
+
+    errorMsg = "How about we explore the area ahead of us later."
+    invalidChoice = "Please select a valid option."
+
+    invalidMovement = True
+
+    while invalidMovement:
+        mapUI(position)
+        print("W = up; A = left; S = down; D = right")
+        choice = input("Your move: ")
+
+        if choice not in posibleChoice:
+            print(invalidChoice)
+            return invalidChoice
+        else:
+            if choice == "w":
+                if position in topWall:
+                    print(errorMsg)
+                else:
+                    position -= 8
+                    invalidMovement = False
+                    player.position = position
+                    mapUI(player.position)
+    
+            if choice == "a":
+                if position in leftWall:
+                    print(errorMsg)
+                else:
+                    position -= 1
+                    invalidMovement = False
+                    player.position = position
+                    mapUI(player.position)
+
+            if choice == "s":
+                if position in bottomWall:
+                    print(errorMsg)
+                else:
+                    position += 8
+                    invalidMovement = False
+                    player.position = position
+                    mapUI(player.position)
+
+            if choice == "d":
+                if position in rightWall:
+                    print(errorMsg)
+                else:
+                    position += 1
+                    invalidMovement = False
+                    player.position = position
+                    mapUI(player.position)
+
+            if invalidMovement :
+                return errorMsg
+            else:
+                return player.position
     
 def mainMenuUI():
     """
@@ -234,42 +360,4 @@ while choice =='0':
     #data = pickle.load(f)
 
 """
-
-def mapUI():
-    """
-    Displays UI for map
-
-    +---+---+---+---+---+---+---+---+ 
-    | T |   |   |   |   |   |   |   | 
-    +---+---+---+---+---+---+---+---+ 
-    |   |   |   | T |   |   |   |   | 
-    +---+---+---+---+---+---+---+---+ 
-    |   |   |   |   |   | T |   |   | 
-    +---+---+---+---+---+---+---+---+ 
-    |   | T |   |   |   |   |   |   | 
-    +---+---+---+---+---+---+---+---+ 
-    |   |   |   |   |   |   |   |   | 
-    +---+---+---+---+---+---+---+---+ 
-    |   |   |   |   |   |   |   |   | 
-    +---+---+---+---+---+---+---+---+ 
-    |   |   |   |   | T |   |   |   | 
-    +---+---+---+---+---+---+---+---+ 
-    |   |   |   |   |   |   |   | K | 
-    +---+---+---+---+---+---+---+---+
-    """
-
-    map = "+---+---+---+---+---+---+---+---+\n"
-    for x in range(1,65):
-        if (x % 8) == 0 and x != 64:
-            map += "|   |\n+---+---+---+---+---+---+---+---+\n"
-        elif x == 1 or x == 12 or x == 22 or x == 26 or x == 53:
-            map += "| T "
-        elif x == 64:
-            map += "| K |\n+---+---+---+---+---+---+---+---+\n"
-        else:
-            map += "|   "
-    
-    print(map)
-    return(map)
-
 
