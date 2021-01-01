@@ -136,7 +136,7 @@ def test_attackMenu_error(monkeypatch):
     monkeypatch.setattr("builtins.input", lambda _: 6)  
     value = attackMenu()
     assert value == "Invalid number. Please try again."
-
+ 
 # TC - TOWN MAP
 def test_mapUI():
     """
