@@ -171,7 +171,7 @@ def test_playerMovement_invalid(monkeypatch):
     value = playerMovement()
     assert value == "Please select a valid option."
 
-def test_playerMovement_invalid(monkeypatch):
+def test_playerMovement(monkeypatch):
     """
     This function shows the map UI and allows player to move their character.
     Player postion starts at 1.
@@ -182,3 +182,4 @@ def test_playerMovement_invalid(monkeypatch):
     monkeypatch.setattr("builtins.input", lambda _: 'd')  
     value = playerMovement()
     assert value == 2
+
