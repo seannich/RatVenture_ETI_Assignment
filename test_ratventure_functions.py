@@ -26,6 +26,17 @@ def test_mainMenu(monkeypatch):
     value = mainMenu()
     assert value == 1
 
+
+def test_mainMenu_invalid(monkeypatch):
+    """
+    Input: 8
+
+    Output: Invalid number. Please try again.
+    """
+    monkeypatch.setattr("builtins.input", lambda _: 8)  
+    value = mainMenu()
+    assert value == "Invalid number. Please try again."
+
 # TC02 - TOWN MENU ================================
 def test_townMenuUI():
     """
