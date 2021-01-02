@@ -13,4 +13,4 @@ jobs:
       with:
         to: ${{ secrets.GC_TEST }}
         token: ${{ secrets.SM_SEAN_TOKEN }}
-        args: There has been a ${{ github.event_name }} (${{ github.action }}) event in ${{ github.ref }} recently from ${{ github.actor }}.
+        args: There has been a ${{ github.event_name }} event in ${{ github.ref }} recently from ${{ github.actor }}.
