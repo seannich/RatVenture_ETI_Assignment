@@ -13,4 +13,4 @@ jobs:
       with:
         to: ${{ secrets.SM_SEAN }}
         token: ${{ secrets.SM_SEAN_TOKEN }}
-        args: There has been a ${{ github.event_name }} event recently.
+        args: There has been a ${{ github.event_name }} event recently from ${{ github.actor }}.
