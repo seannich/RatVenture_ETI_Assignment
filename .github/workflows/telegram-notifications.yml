@@ -11,6 +11,6 @@ jobs:
     - name: Message
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.SM_SEAN }}
+        to: ${{ secrets.GC_TEST }}
         token: ${{ secrets.SM_SEAN_TOKEN }}
         args: There has been a ${{ github.event_name }} (${{ github.action }}) event in ${{ github.ref }} recently from ${{ github.actor }}.
