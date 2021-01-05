@@ -13,6 +13,6 @@ jobs:
       with:
         to: ${{ secrets.GC_TEST }}
         token: ${{ secrets.SM_SEAN_TOKEN }}
-        args: "${{ github.actor }} has made a ${{ github.event_name }} event in ${{ github.ref }} recently.\n
+        args: "${{ github.actor }} has made a ${{ github.event_name }} event in the ${{ github.ref }} branch recently.\n
         
               You can visit this change at ${{ github.server_url }}/seannich/ETI_Exercise_7_and_8/commit/${{ github.sha }}"
