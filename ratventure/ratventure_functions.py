@@ -17,34 +17,113 @@ class Player:
         self.position = 1
         self.location = 'You are in a Town'
         self.locationTag = 'H'
+
+    def herostats(self):
+        ''' 
+        This function prints out the player's name, damage, defence and HP.
+        Expected Output: 
+        The Hero
+        Damage: 2-4
+        Defence: 1
+        HP: 20
+        '''
+        stats = self.name + "\nDamage: {}\nDefence: {}\nHP: {}".format(self.damage,self.defence,self.hp)
+        print(stats)
+
+        return stats
  
-player = Player()
+    def herorest(self):
+        '''
+        This function restores the player to 20, adds 1 day to the day count and prints out "You are fully healed".
+        Expected Output:
+        20 2
+        '''
+        self.hp = 20
+        self.day += 1
+        print("You are fully healed.")
 
-def herostats():
-    ''' 
-    This function prints out the player's name, damage, defence and HP.
-    Expected Output: 
-    The Hero
-    Damage: 2-4
-    Defence: 1
-    HP: 20
-    '''
-    stats = player.name + "\nDamage: {}\nDefence: {}\nHP: {}".format(player.damage,player.defence,player.hp)
-    print(stats)
+        return self.hp, self.day
 
-    return stats
+    def playerMovement(self):
+        """
+        This function shows the map UI and allows player to move their character.
+        Player postion starts at 1.
+        
+        W: player.postion -8
+        A: player.postion -1
+        S: player.postion +8
+        D: player.postion +1
 
-def herorest():
-    '''
-    This function restores the player to 20, adds 1 day to the day count and prints out "You are fully healed".
-    Expected Output:
-    20 2
-    '''
-    player.hp = 20
-    player.day += 1
-    print("You are fully healed.")
+        If player goes outside of map: How about we explore the area ahead of us later.
 
-    return player.hp, player.day
+        If player chooses something other than wasd: Please select a valid option.
+
+        If player chooses acceptable choice: return player postition
+
+        """
+        position = self.position
+
+        topWall = [1,2,3,4,5,6,7,8]
+        leftWall = [1,9,17,25,33,41,49,57]
+        bottomWall = [57,58,59,60,61,62,63,64]
+        rightWall = [8,16,24,32,40,48,56,64]
+        posibleChoice = ["w", "a", "s", "d"]
+
+        errorMsg = "How about we explore the area ahead of us later."
+        invalidChoice = "Please select a valid option."
+
+        invalidMovement = True
+
+        while invalidMovement:
+            mapUI(position)
+            print("W = up; A = left; S = down; D = right")
+            choice = input("Your move: ")
+
+            if choice not in posibleChoice:
+                print(invalidChoice)
+                return invalidChoice
+            else:
+                if choice == "w":
+                    if position in topWall:
+                        print(errorMsg)
+                    else:
+                        position -= 8
+                        invalidMovement = False
+                        self.position = position
+                        mapUI(self.position)
+        
+                if choice == "a":
+                    if position in leftWall:
+                        print(errorMsg)
+                    else:
+                        position -= 1
+                        invalidMovement = False
+                        self.position = position
+                        mapUI(self.position)
+
+                if choice == "s":
+                    if position in bottomWall:
+                        print(errorMsg)
+                    else:
+                        position += 8
+                        invalidMovement = False
+                        self.position = position
+                        mapUI(self.position)
+
+                if choice == "d":
+                    if position in rightWall:
+                        print(errorMsg)
+                    else:
+                        position += 1
+                        invalidMovement = False
+                        self.position = position
+                        mapUI(self.position)
+
+                if invalidMovement :
+                    return errorMsg
+                else:
+                    return self.position
+
 def mapUI(position):
     """
     Displays UI for map
@@ -91,86 +170,6 @@ def mapUI(position):
     
     print(map)
     return(map)
-
-def playerMovement():
-    """
-    This function shows the map UI and allows player to move their character.
-    Player postion starts at 1.
-    
-    W: player.postion -8
-    A: player.postion -1
-    S: player.postion +8
-    D: player.postion +1
-
-    If player goes outside of map: How about we explore the area ahead of us later.
-
-    If player chooses something other than wasd: Please select a valid option.
-
-    If player chooses acceptable choice: return player postition
-
-    """
-    position = player.position
-
-    topWall = [1,2,3,4,5,6,7,8]
-    leftWall = [1,9,17,25,33,41,49,57]
-    bottomWall = [57,58,59,60,61,62,63,64]
-    rightWall = [8,16,24,32,40,48,56,64]
-    posibleChoice = ["w", "a", "s", "d"]
-
-    errorMsg = "How about we explore the area ahead of us later."
-    invalidChoice = "Please select a valid option."
-
-    invalidMovement = True
-
-    while invalidMovement:
-        mapUI(position)
-        print("W = up; A = left; S = down; D = right")
-        choice = input("Your move: ")
-
-        if choice not in posibleChoice:
-            print(invalidChoice)
-            return invalidChoice
-        else:
-            if choice == "w":
-                if position in topWall:
-                    print(errorMsg)
-                else:
-                    position -= 8
-                    invalidMovement = False
-                    player.position = position
-                    mapUI(player.position)
-    
-            if choice == "a":
-                if position in leftWall:
-                    print(errorMsg)
-                else:
-                    position -= 1
-                    invalidMovement = False
-                    player.position = position
-                    mapUI(player.position)
-
-            if choice == "s":
-                if position in bottomWall:
-                    print(errorMsg)
-                else:
-                    position += 8
-                    invalidMovement = False
-                    player.position = position
-                    mapUI(player.position)
-
-            if choice == "d":
-                if position in rightWall:
-                    print(errorMsg)
-                else:
-                    position += 1
-                    invalidMovement = False
-                    player.position = position
-                    mapUI(player.position)
-
-            if invalidMovement :
-                return errorMsg
-            else:
-                return player.position
     
 def mainMenuUI():
     """

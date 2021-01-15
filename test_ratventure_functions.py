@@ -1,5 +1,9 @@
 import pytest
+import random
 from ratventure.ratventure_functions import *
+
+#Initialise player object for test
+player = Player()
 
 # TC01 - MAIN MENU ==================================
 def test_mainMenuUI():
@@ -165,7 +169,7 @@ def test_mapUI():
     assert value == "+---+---+---+---+---+---+---+---+\n|H/T|   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   | T |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   | T |   |   |\n+---+---+---+---+---+---+---+---+\n|   | T |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   | T |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   | K |\n+---+---+---+---+---+---+---+---+\n"
 
 # TC - Hero Statistic 
-def test_herostats(monkeypatch):
+def test_herostats():
     ''' 
     enter choice: 1
     This function prints out the player's name, damage, defence and HP.
@@ -175,23 +179,19 @@ def test_herostats(monkeypatch):
     Defence: 1
     HP: 20
     '''
-    monkeypatch.setattr("builtins.input", lambda _: 1)  
-    value = herostats()
+    value = player.herostats()
     assert value == "The Hero\nDamage: 2-4\nDefence: 1\nHP: 20"
 
 # TC -  Hero Rest 
-def test_herorest(monkeypatch):
+def test_herorest():
     '''
     enter choice:4
     This function restores the player to 20, adds 1 day to the day count and prints out "You are fully healed".
     Expected Output:
     (20, 2)
     '''
-    monkeypatch.setattr("builtins.input", lambda _: 4)  
-    value = herorest()
+    value = player.herorest()
     assert value == (20, 2)
-    value = mapUI(1)
-    assert value == "+---+---+---+---+---+---+---+---+\n|H/T|   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   | T |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   | T |   |   |\n+---+---+---+---+---+---+---+---+\n|   | T |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   | T |   |   |   |\n+---+---+---+---+---+---+---+---+\n|   |   |   |   |   |   |   | K |\n+---+---+---+---+---+---+---+---+\n"
 
 
 # SPRINT 2 
@@ -205,7 +205,7 @@ def test_playerMovement_oob(monkeypatch):
 
     """
     monkeypatch.setattr("builtins.input", lambda _: 'w')  
-    value = playerMovement()
+    value = player.playerMovement()
     assert value == "How about we explore the area ahead of us later."
 
 def test_playerMovement_invalid(monkeypatch):
@@ -217,7 +217,7 @@ def test_playerMovement_invalid(monkeypatch):
 
     """
     monkeypatch.setattr("builtins.input", lambda _: 'Q')  
-    value = playerMovement()
+    value = player.playerMovement()
     assert value == "Please select a valid option."
 
 def test_playerMovement(monkeypatch):
@@ -229,6 +229,6 @@ def test_playerMovement(monkeypatch):
 
     """
     monkeypatch.setattr("builtins.input", lambda _: 'd')  
-    value = playerMovement()
+    value = player.playerMovement()
     assert value == 2
 
