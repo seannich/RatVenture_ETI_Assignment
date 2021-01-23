@@ -109,7 +109,7 @@ def test_outdoorMenu_invalid(monkeypatch):
     Output: Invalid number. Please try again.
     """
     monkeypatch.setattr("builtins.input", lambda _: 6)  
-    value = attackMenu()
+    value = outdoorMenu()
     assert value == "Invalid number. Please try again."
 
 # TC - ATTACK MENU =================================
@@ -118,7 +118,7 @@ def test_attackMenuUI():
     1) Attack
     2) Run
     """
-    value =attackMenuUI()
+    value = attackMenuUI()
     assert value == "1) Attack\n2) Run"
 
 def test_attackMenu(monkeypatch):
@@ -128,7 +128,8 @@ def test_attackMenu(monkeypatch):
     Output: 1 
     """    
     monkeypatch.setattr("builtins.input", lambda _: 1)  
-    value = attackMenu()
+    player = Player()
+    value = attackMenu(player)
     assert value == 1
 
 def test_attackMenu_error(monkeypatch):
@@ -138,7 +139,8 @@ def test_attackMenu_error(monkeypatch):
     Output: Invalid number. Please try again.
     """
     monkeypatch.setattr("builtins.input", lambda _: 6)  
-    value = attackMenu()
+    player = Player()
+    value = attackMenu(player)    
     assert value == "Invalid number. Please try again."
  
 # TC - TOWN MAP

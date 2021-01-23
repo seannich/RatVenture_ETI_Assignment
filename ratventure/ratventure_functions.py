@@ -1,6 +1,6 @@
 import os
 import sys
-import pickle
+import random
 
 class Player:
     """
@@ -124,6 +124,14 @@ class Player:
                     return errorMsg
                 else:
                     return self.position
+    
+    def calculateDamage(self):
+        '''
+        Outputs an attack value between the player's min and max damage
+        '''
+        heroAtk = random.randrange(self.minDamage, self.maxDamage)
+
+        return heroAtk
 
 class Enemy:
     """
@@ -141,6 +149,27 @@ class Enemy:
         self.maxHp = maxHp
         self.hp = self.maxHp
         self.alive = True
+
+    def calculateDamage(self):
+        '''
+        Outputs an attack value between the enemy's min and max damage
+        '''
+        enemyAtk = random.randrange(self.minDamage, self.maxDamage)
+
+        return enemyAtk
+
+def dealDamage(player, heroAtk, enemy, enemyAtk):
+    '''
+    This function calculates the attack of the player and enemy. 
+    
+    Input: heroAtk - player's attack
+           enemy - Enemy object that the player is fighting against (Example: rat)
+           enemyAtk - enemy's attack
+    '''
+    finalHeroAtk = heroAtk - enemy.defence
+    finalEnemyAtk = enemyAtk - player.defence
+    player.hp -= finalEnemyAtk
+    enemy.hp -= finalHeroAtk 
 
 def mapUI(position):
     """
@@ -294,15 +323,25 @@ def attackMenuUI():
 
     return attackMenuUI
 
-def attackMenu():
+def attackMenu(player):
     """
     takes in and displays player input choice
     """
+
+    attackMenuUI()
+
+    rat = Enemy("Rat", 1, 3, 1, 10)
+
     choice = int(input("Enter choice: "))
     if choice > 2 or choice < 0 :
         print("Invalid number. Please try again.")
         return "Invalid number. Please try again."
     else:
+        if choice == 1:
+            heroAtk = player.calculateDamage()
+            enemyAtk = rat.calculateDamage()
+            dealDamage(player, heroAtk, rat, enemyAtk)
+
         return choice
 """
 def main():
