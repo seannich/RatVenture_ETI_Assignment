@@ -166,6 +166,10 @@ def dealDamage(player, heroAtk, enemy, enemyAtk):
            enemy - Enemy object that the player is fighting against (Example: rat)
            enemyAtk - enemy's attack
     '''
+
+    if (player.combat == False):
+        player.combat = True
+
     finalHeroAtk = heroAtk - enemy.defence
     finalEnemyAtk = enemyAtk - player.defence
     player.hp -= finalEnemyAtk
@@ -307,15 +311,7 @@ def outdoorMenu():
         return "Invalid number. Please try again."
     else:
         return choice
-"""
-    "You deal" + damage "to the Rat"
-    "Ouch! The Rat hit you for" + damage "!"
-    "You have" + hp + "HP left."
-    "Encounter! - Rat"
-    "Damage:" + damage
-    "Defence:" + defence
-    "HP:" + hp
-"""
+
 def attackMenuUI(player, enemy):
     """
     Displays UI for town menu
@@ -345,6 +341,7 @@ def attackMenu(player):
     takes in and displays player input choice
     """
     rat = Enemy("Rat", 1, 3, 1, 10)
+    player.combat = True
 
     attackMenuUI(player, rat)
     
