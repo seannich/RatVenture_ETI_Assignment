@@ -18,6 +18,7 @@ class Player:
         self.location = 'You are in a Town'
         self.locationTag = 'H'
         self.combat = False
+        self.alive = True
 
     def herostats(self):
         ''' 
@@ -172,13 +173,22 @@ def dealDamage(player, heroAtk, enemy, enemyAtk):
 
     finalHeroAtk = heroAtk - enemy.defence
     finalEnemyAtk = enemyAtk - player.defence
-    player.hp -= finalEnemyAtk
     enemy.hp -= finalHeroAtk 
-
+    
     combatUI = ""
     combatUI += "\nYou deal {} damage to the Rat\n".format(finalHeroAtk)
-    combatUI += "Ouch! The Rat hit you for {} damage!\n".format(finalEnemyAtk)
-    combatUI += "You have {} HP left.\n".format(player.hp)
+    if (enemy.hp <= 0):
+        combatUI += "The {} is dead! You are victorious!".format(enemy.name)
+        player.combat = False
+    else:
+        player.hp -= finalEnemyAtk
+        combatUI += "Ouch! The Rat hit you for {} damage!\n".format(finalEnemyAtk)
+        combatUI += "You have {} HP left.\n".format(player.hp)
+
+    if (player.hp <= 0):
+        player.alive = False
+        combatUI += "\nYou have died"
+
     print(combatUI)
 
 def mapUI(position):
