@@ -231,4 +231,3 @@ def test_playerMovement(monkeypatch):
     monkeypatch.setattr("builtins.input", lambda _: 'd')  
     value = player.playerMovement()
     assert value == 2
-
