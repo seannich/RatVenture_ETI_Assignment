@@ -17,6 +17,7 @@ class Player:
         self.position = 1
         self.location = 'You are in a Town'
         self.locationTag = 'H'
+        self.combat = False
 
     def herostats(self):
         ''' 
@@ -123,6 +124,23 @@ class Player:
                     return errorMsg
                 else:
                     return self.position
+
+class Enemy:
+    """
+    Enemy class to create an enemy for player to fight when they enter combat
+
+    Example of how to create object:
+    rat = Enemy('Rat', 1, 3, 1, 10)
+
+    """
+    def __init__(self, name, minDamage, maxDamage, defence, maxHp):
+        self.name = name
+        self.minDamage = minDamage
+        self.maxDamage = maxDamage
+        self.defence = defence
+        self.maxHp = maxHp
+        self.hp = self.maxHp
+        self.alive = True
 
 def mapUI(position):
     """
