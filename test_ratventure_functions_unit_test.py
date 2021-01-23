@@ -12,7 +12,7 @@ def test_player_run1():
     rat = Enemy("Rat", 1, 3, 1, 10)
 
     player.combat = True
-    player.run() 
+    run(player,rat) 
 
     assert player.combat == False
     assert rat.hp == 10
@@ -25,9 +25,10 @@ def test_player_run2():
     Expected outcome for Rat King's hp is 25 and player's combat = false
     """
     player = Player()
-    rat = Enemy("Rat King", 8, 12, 5, 25)
+    ratk = Enemy("Rat King", 8, 12, 5, 25)
 
     player.combat = True
-    player.run() 
+    run(player,ratk) 
+
     assert player.combat == False
-    assert rat.hp == 25
+    assert ratk.hp == 25

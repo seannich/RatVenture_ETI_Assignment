@@ -35,7 +35,7 @@ class Player:
  
     def herorest(self):
         '''
-        This function restores the player to 20, adds 1 day to the day count and prints out "You are fully healed".
+        This function restores the player hp to 20, adds 1 day to the day count and prints out "You are fully healed".
         Expected Output:
         20 2
         '''
@@ -44,6 +44,7 @@ class Player:
         print("You are fully healed.")
 
         return self.hp, self.day
+
 
     def playerMovement(self):
         """
@@ -142,6 +143,8 @@ class Enemy:
         self.hp = self.maxHp
         self.alive = True
 
+
+        
 def mapUI(position):
     """
     Displays UI for map
