@@ -118,8 +118,10 @@ def test_attackMenuUI():
     1) Attack
     2) Run
     """
-    value = attackMenuUI()
-    assert value == "1) Attack\n2) Run"
+    player = Player()
+    rat = Enemy("Rat", 1, 3, 1, 10)
+    value = attackMenuUI(player, rat)
+    assert value == "Day 1: You are out in the open.\nEncounter! - Rat\nDamage: 1-3\nDefence: 1\nHP: 10\n1) Attack\n2) Run\n"
 
 def test_attackMenu(monkeypatch):
     """

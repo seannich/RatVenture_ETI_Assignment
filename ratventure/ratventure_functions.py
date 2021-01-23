@@ -310,15 +310,26 @@ def outdoorMenu():
     "Defence:" + defence
     "HP:" + hp
 """
-def attackMenuUI():
+def attackMenuUI(player, enemy):
     """
     Displays UI for town menu
-
+    Day A: You are out in the open.     (A is determined by player.day)
+    Encounter! - B                      (B is determined by enemy.name)
+    Damage: C-D                         (C and D is determined by enemy.minDamage and enemy.maxDamage respectively)
+    Defence: E                          (E is determined by enemy.defence)
+    HP: F                               (F is determined by enemy.hp)
     1) Attack
     2) Run
     """
+    attackMenuUI = ""
+    attackMenuUI += "Day {}: You are out in the open.\n".format(player.day)
+    attackMenuUI += "Encounter! - {}\n".format(enemy.name)
+    attackMenuUI += "Damage: {}-{}\n".format(enemy.minDamage, enemy.maxDamage)
+    attackMenuUI += "Defence: {}\n".format(enemy.defence)
+    attackMenuUI += "HP: {}\n".format(enemy.maxHp)
+    attackMenuUI += "1) Attack\n"
+    attackMenuUI += "2) Run\n"
 
-    attackMenuUI = "1) Attack\n2) Run"
     print(attackMenuUI)
 
     return attackMenuUI
@@ -327,11 +338,10 @@ def attackMenu(player):
     """
     takes in and displays player input choice
     """
-
-    attackMenuUI()
-
     rat = Enemy("Rat", 1, 3, 1, 10)
 
+    attackMenuUI(player, rat)
+    
     choice = int(input("Enter choice: "))
     if choice > 2 or choice < 0 :
         print("Invalid number. Please try again.")
