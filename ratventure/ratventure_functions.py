@@ -171,6 +171,12 @@ def dealDamage(player, heroAtk, enemy, enemyAtk):
     player.hp -= finalEnemyAtk
     enemy.hp -= finalHeroAtk 
 
+    combatUI = ""
+    combatUI += "\nYou deal {} damage to the Rat\n".format(finalHeroAtk)
+    combatUI += "Ouch! The Rat hit you for {} damage!\n".format(finalEnemyAtk)
+    combatUI += "You have {} HP left.\n".format(player.hp)
+    print(combatUI)
+
 def mapUI(position):
     """
     Displays UI for map
