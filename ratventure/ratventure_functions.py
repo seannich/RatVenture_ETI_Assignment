@@ -272,6 +272,8 @@ def outdoorMenu():
         return "Invalid number. Please try again."
     else:
         return choice
+
+
 """
     "You deal" + damage "to the Rat"
     "Ouch! The Rat hit you for" + damage "!"
