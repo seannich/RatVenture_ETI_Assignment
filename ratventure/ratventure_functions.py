@@ -262,17 +262,31 @@ def outdoorMenuUI():
 
     return outdoorMenuUI
 
-def outdoorMenu():
+def outdoorMenu(player):
     """
     takes in and displays player input choice
     """
+    outdoorMenuUI()
     choice = int(input("Enter choice: "))
     if choice > 4 or choice < 0 :
         print("Invalid number. Please try again.")
         return "Invalid number. Please try again."
     else:
+        outdoorMenuinput(choice,player)
         return choice
 
+def outdoorMenuinput(choice,player):
+    """
+    Checks player input choice and changes state of player combat accordingly
+    """
+
+    if choice == 1 or choice == 2 :
+        player.combat = True
+        return choice
+
+    elif choice == 3 or choice == 4 :
+        player.combat = False      
+        return choice
 
 """
     "You deal" + damage "to the Rat"

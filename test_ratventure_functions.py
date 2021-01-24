@@ -98,8 +98,9 @@ def test_outdoorMenu(monkeypatch):
 
     Output: 1 
     """    
+    player = Player()
     monkeypatch.setattr("builtins.input", lambda _: 1)  
-    value = outdoorMenu()
+    value = outdoorMenu(player)
     assert value == 1
 
 def test_outdoorMenu_invalid(monkeypatch):
