@@ -284,7 +284,11 @@ def outdoorMenuinput(choice,player):
         player.combat = True
         return choice
 
-    elif choice == 3 or choice == 4 :
+    elif choice == 3 :
+        player.combat = False      
+        return choice
+
+    elif choice == 4 :
         player.combat = False      
         return choice
 
