@@ -8,10 +8,8 @@ def test_outdoormenu_1():
     This test tests if the user inputs "1" into the Outdoor Menu after escaping from combat (i.e. Run function in Combat Menu)
     Expected outcome is player's combat = true
     """
-    
     player = Player()
-
-    outdoorMenuinput(1)
+    outdoorMenuinput(1,player)
 
     assert player.combat == True
 
@@ -21,10 +19,8 @@ def test_outdoormenu_2():
     This test tests if the user inputs "2" into the Outdoor Menu after escaping from combat (i.e. Run function in Combat Menu)
     Expected outcome is player's combat = true
     """
-    
     player = Player()
-
-    outdoorMenuinput(2)
+    outdoorMenuinput(2,player)
 
     assert player.combat == True
 
@@ -34,10 +30,8 @@ def test_outdoormenu_3():
     This test tests if the user inputs "3" into the Outdoor Menu after escaping from combat (i.e. Run function in Combat Menu)
     Expected outcome is player's combat = false
     """
-    
     player = Player()
-
-    outdoorMenuinput(3)
+    outdoorMenuinput(3,player)
 
     assert player.combat == False
 
@@ -47,9 +41,7 @@ def test_outdoormenu_4():
     This test tests if the user inputs "4" into the Outdoor Menu after escaping from combat (i.e. Run function in Combat Menu)
     Expected outcome is player's combat = false
     """
-    
     player = Player()
-
-    outdoorMenuinput(4)
+    outdoorMenuinput(4,player)
 
     assert player.combat == False

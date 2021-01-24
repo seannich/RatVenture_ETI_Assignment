@@ -274,7 +274,6 @@ def outdoorMenu():
         return choice
 
 
-
 """
     "You deal" + damage "to the Rat"
     "Ouch! The Rat hit you for" + damage "!"
