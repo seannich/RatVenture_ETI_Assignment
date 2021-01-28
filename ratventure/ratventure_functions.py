@@ -1,7 +1,7 @@
 import os
 import sys
 import pickle
-
+import random
 class Player:
     """
     Player class for when the player first starts the game
@@ -188,7 +188,9 @@ def mapUI(position):
     
     print(map)
     return(map)
-    
+
+
+
 def mainMenuUI():
     """
     Displays UI for main menu

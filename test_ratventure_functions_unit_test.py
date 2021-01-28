@@ -6,5 +6,5 @@ def test_orbposition():
     
     townPosition = [1,12,22,26,53]
     value = spawnorb(townPosition)
-    assert value == townPosition
+    assert value in townPosition
     assert value != 1
