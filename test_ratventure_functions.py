@@ -236,3 +236,34 @@ def test_playerMovement(monkeypatch):
     value = player.playerMovement()
     assert value == 2
 
+def test_player_attack_random():
+    """
+    This test takes the scenario that the rat deals 1 damage to the player. Player will deal 2 damage by default
+
+    Expected output for player hp is 20
+    """
+    player = Player()
+    for x in range(10):
+        result = player.calculateDamage()
+        print(result)
+    assert result == 1 or 2 or 3
+    
+def test_player_attack_random_invalid():
+    """
+    This test takes the scenario that the rat deals 1 damage to the player. Player will deal 2 damage by default
+
+    Expected output for damage delt should either be 1,2,3
+    """
+    player = Player()
+    result = player.calculateDamage()
+    assert result != 0 
+
+def test_player_attack():
+    """
+    This test takes the scenario that the rat deals 1 damage to the player. Player will deal 2 damage by default
+
+    Expected output for damage delt should either be 1,2,3
+    """
+    player = Player()
+    result = player.calculateDamage()
+    assert result == 1 or 2 or 3
