@@ -109,7 +109,7 @@ def test_outdoorMenu_invalid(monkeypatch):
     Output: Invalid number. Please try again.
     """
     monkeypatch.setattr("builtins.input", lambda _: 6)  
-    value = attackMenu()
+    value = attackMenu(player)
     assert value == "Invalid number. Please try again."
 
 # TC - ATTACK MENU =================================
@@ -128,7 +128,7 @@ def test_attackMenu(monkeypatch):
     Output: 1 
     """    
     monkeypatch.setattr("builtins.input", lambda _: 1)  
-    value = attackMenu()
+    value = attackMenu(player)
     assert value == 1
 
 def test_attackMenu_error(monkeypatch):
@@ -138,7 +138,7 @@ def test_attackMenu_error(monkeypatch):
     Output: Invalid number. Please try again.
     """
     monkeypatch.setattr("builtins.input", lambda _: 6)  
-    value = attackMenu()
+    value = attackMenu(player)
     assert value == "Invalid number. Please try again."
  
 # TC - TOWN MAP
@@ -231,3 +231,23 @@ def test_playerMovement(monkeypatch):
     monkeypatch.setattr("builtins.input", lambda _: 'd')  
     value = player.playerMovement()
     assert value == 2
+
+# SPRINT 3
+# TC_36: Encounter Opponent and Run Away
+def test_player_runFromEnemy(monkeypatch):
+    """
+    This function is to test if the player runs from the enemy.
+    """
+    monkeypatch.setattr("builtins.input", lambda _: 2)
+    value = attackMenu(player)
+    assert value == "You run and hide."
+
+def test_player_runFromEnemy_error(monkeypatch):
+    """
+    Input: 6
+
+    Output: Invalid number. Please try again.
+    """
+    monkeypatch.setattr("builtins.input", lambda _: 6)  
+    value = attackMenu(player)
+    assert value == "Invalid number. Please try again."
