@@ -319,6 +319,7 @@ def attackMenu(player):
         if choice == 2 :
             run(player,rat)
             return "You run and hide."
+        return choice
 """
 def main():
 
