@@ -26,7 +26,7 @@ jobs:
     - name: Test with pytest
       id: TestWithPytest
       run: |
-           pytest -v --junitxml=report.xml
+           pytest -v --cov --junitxml=report.xml
     - if: ${{failure()}}       
       name: Create Issues
       uses: nashmaniac/create-issue-action@v1.1
