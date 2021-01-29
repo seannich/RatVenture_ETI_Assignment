@@ -18,6 +18,7 @@ class Player:
         self.location = 'You are in a Town'
         self.locationTag = 'H'
         self.combat = False
+        self.hasOrb = False
 
     def herostats(self):
         ''' 
@@ -141,6 +142,12 @@ class Enemy:
         self.maxHp = maxHp
         self.hp = self.maxHp
         self.alive = True
+
+def obtainOrb(player):
+    player.hasOrb = True
+    player.minDamage = 7
+    player.maxDamage = 9
+    player.defence = 6
 
 def mapUI(position):
     """
