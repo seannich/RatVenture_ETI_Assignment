@@ -35,7 +35,7 @@ class Player:
  
     def herorest(self):
         '''
-        This function restores the player to 20, adds 1 day to the day count and prints out "You are fully healed".
+        This function restores the player hp to 20, adds 1 day to the day count and prints out "You are fully healed".
         Expected Output:
         20 2
         '''
@@ -44,6 +44,7 @@ class Player:
         print("You are fully healed.")
 
         return self.hp, self.day
+
 
     def playerMovement(self):
         """
@@ -142,6 +143,16 @@ class Enemy:
         self.hp = self.maxHp
         self.alive = True
 
+def run(player, enemy):
+    '''
+    This function sets the player's combat state to False, restores the Enemy's HP to maximum and prints out "You run and hide".
+    Expected Output:
+    False , Enemy HP restored to max
+    '''
+    player.combat = False
+    enemy.hp = enemy.maxHp
+    print("You run and hide.") 
+        
 def mapUI(position):
     """
     Displays UI for map
@@ -294,15 +305,20 @@ def attackMenuUI():
 
     return attackMenuUI
 
-def attackMenu():
+def attackMenu(player):
     """
     takes in and displays player input choice
     """
+    rat = Enemy("Rat", 1, 3, 1, 10) 
+
     choice = int(input("Enter choice: "))
     if choice > 2 or choice < 0 :
         print("Invalid number. Please try again.")
         return "Invalid number. Please try again."
     else:
+        if choice == 2 :
+            run(player,rat)
+            return "You run and hide."
         return choice
 """
 def main():
