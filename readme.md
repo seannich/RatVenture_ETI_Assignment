@@ -42,7 +42,7 @@ and save your game. Once you find the Orb of Power, the Rat King loses.
 ## Test Case
 https://docs.google.com/spreadsheets/d/1REM_Zuic9MikKO7BMGfUAbZG_yLYqEZaIX6TLMytje0/edit?usp=sharing
 ### Unit Test Case
-https://docs.google.com/spreadsheets/d/1DK48HHMUWz7tdjme2gWoUE1di0bqIsU-PecbWBIZ3JE/edit#gid=0
+https://docs.google.com/spreadsheets/d/1DK48HHMUWz7tdjme2gWoUE1di0bqIsU-PecbWBIZ3JE/edit?usp=sharing
 
 ## METHODLOGOIES CONSIDERED
 1. Iterative Model
