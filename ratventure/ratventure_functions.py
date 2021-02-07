@@ -1,7 +1,7 @@
 import os
 import sys
 import pickle
-
+import random
 class Player:
     """
     Player class for when the player first starts the game
@@ -35,7 +35,7 @@ class Player:
  
     def herorest(self):
         '''
-        This function restores the player hp to 20, adds 1 day to the day count and prints out "You are fully healed".
+        This function restores the player to 20, adds 1 day to the day count and prints out "You are fully healed".
         Expected Output:
         20 2
         '''
@@ -44,7 +44,6 @@ class Player:
         print("You are fully healed.")
 
         return self.hp, self.day
-
 
     def playerMovement(self):
         """
@@ -143,16 +142,14 @@ class Enemy:
         self.hp = self.maxHp
         self.alive = True
 
-def run(player, enemy):
-    '''
-    This function sets the player's combat state to False, restores the Enemy's HP to maximum and prints out "You run and hide".
-    Expected Output:
-    False , Enemy HP restored to max
-    '''
-    player.combat = False
-    enemy.hp = enemy.maxHp
-    print("You run and hide.") 
-        
+def spawnorb(townPosition):
+    """
+    Spawns the Orb of Power in a random town except the first town (the town that the player spawns in) and returns the town position that the orb is in
+    """
+    orbPossiblePosition = townPosition[1:-1]
+    orbPosition = random.choice(orbPossiblePosition)
+    return orbPosition
+
 def mapUI(position):
     """
     Displays UI for map
@@ -178,6 +175,7 @@ def mapUI(position):
 
     map = "+---+---+---+---+---+---+---+---+\n"
     townPosition = [1,12,22,26,53]
+    orbposition = spawnorb(townPosition)
 
     for x in range(1,65):
         if (x % 8) == 0 and x != 64:
@@ -185,8 +183,11 @@ def mapUI(position):
         elif x in townPosition:
             if x == position:
                 map += "|H/T"
+            elif x == orbposition:
+                map += "|T/O"
             else:
                 map += "| T "
+            
         elif x == 64:
             if x == position:
                 map += "|H/K|\n+---+---+---+---+---+---+---+---+\n"
@@ -199,7 +200,8 @@ def mapUI(position):
     
     print(map)
     return(map)
-    
+
+
 def mainMenuUI():
     """
     Displays UI for main menu
@@ -305,20 +307,15 @@ def attackMenuUI():
 
     return attackMenuUI
 
-def attackMenu(player):
+def attackMenu():
     """
     takes in and displays player input choice
     """
-    rat = Enemy("Rat", 1, 3, 1, 10) 
-
     choice = int(input("Enter choice: "))
     if choice > 2 or choice < 0 :
         print("Invalid number. Please try again.")
         return "Invalid number. Please try again."
     else:
-        if choice == 2 :
-            run(player,rat)
-            return "You run and hide."
         return choice
 """
 def main():

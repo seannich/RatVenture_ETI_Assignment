@@ -1,6 +1,7 @@
 import os
 from ratventure_functions import *
 
+player = Player()
 #mainMenuUI()
 #mainMenu()
 #townMenuUI()
@@ -8,9 +9,8 @@ from ratventure_functions import *
 #outdoorMenuUI()
 #outdoorMenu()
 #attackMenuUI()
-player = Player()
-attackMenu(player)
-#mapUI()
-# herostats()
+#attackMenu()
+mapUI(player)
+#herostats()
 #herorest()
 #playerMovement()
