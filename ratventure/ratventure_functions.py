@@ -142,6 +142,16 @@ class Enemy:
         self.hp = self.maxHp
         self.alive = True
 
+def run(player, enemy):
+    '''
+    This function sets the player's combat state to False, restores the Enemy's HP to maximum and prints out "You run and hide".
+    Expected Output: 
+    False, Enemy HP restored to max
+    '''
+    player.combat = False
+    enemy.hp = enemy.maxHp
+    print("You run and hide.")
+
 def spawnorb(townPosition):
     """
     Spawns the Orb of Power in a random town except the first town (the town that the player spawns in) and returns the town position that the orb is in
@@ -307,15 +317,20 @@ def attackMenuUI():
 
     return attackMenuUI
 
-def attackMenu():
+def attackMenu(player):
     """
     takes in and displays player input choice
     """
+    rat = Enemy("Rat", 1, 3, 1, 10)
+
     choice = int(input("Enter choice: "))
     if choice > 2 or choice < 0 :
         print("Invalid number. Please try again.")
         return "Invalid number. Please try again."
     else:
+        if choice == 2:
+            run(player, rat)
+            return "You run and hide."
         return choice
 """
 def main():
