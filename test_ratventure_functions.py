@@ -215,6 +215,7 @@ def test_player_runFromEnemy(monkeypatch):
     value = attackMenu(player)
     assert value == "You run and hide."
 
+# TC_37
 def test_player_runFromEnemy_error(monkeypatch):
     '''
     Input: 6
@@ -224,7 +225,7 @@ def test_player_runFromEnemy_error(monkeypatch):
     value = attackMenu(player)
     assert value == "Invalid number. Please try again."
 
-# TC_40
+# TC_41
 def test_mapUI(monkeypatch):
     """
     This functions shows the world map and displays the towns and where the Orb of Power is.
